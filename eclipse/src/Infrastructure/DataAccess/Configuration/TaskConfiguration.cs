@@ -57,7 +57,7 @@ public class TaskConfiguration : IEntityTypeConfiguration<Task>
                .WithMany(c => c.ListTask)
                .HasForeignKey(c => c.ProjectId)
                .IsRequired()
-               .OnDelete(DeleteBehavior.NoAction);
+               .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(c => c.User)
                .WithMany(c => c.ListTask)
