@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public class User : BaseEntity
+public class User : BaseGenericEntity
 {
     public User()
     {
@@ -41,6 +41,8 @@ public class User : BaseEntity
     public virtual ICollection<Project> ListProject { get; private set; } = new HashSet<Project>();
 
     public virtual ICollection<Task> ListTask { get; private set; } = new HashSet<Task>();
+
+    public virtual ICollection<AuditLog> ListAuditLog { get; private set; } = new HashSet<AuditLog>();
 
     #region Validate
 

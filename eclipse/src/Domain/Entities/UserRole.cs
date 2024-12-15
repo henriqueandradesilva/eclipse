@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public class UserRole : BaseEntity
+public class UserRole : BaseGenericEntity
 {
     public UserRole()
     {

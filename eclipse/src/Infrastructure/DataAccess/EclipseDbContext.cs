@@ -43,11 +43,21 @@ public sealed class EclipseDbContext : DbContext
 
         foreach (var entry in entries)
         {
-            if (entry.State == EntityState.Modified)
-                Log.Debug($"Entity: {entry.Entity.GetType().Name}, Date Updated after set: {entry.CurrentValues["DateUpdated"]}");
+            if (entry.OriginalValues.Properties.Any(p => p.Name == "DateUpdated"))
+            {
+                var dateUpdated = entry.CurrentValues["DateUpdated"];
 
-            if (entry.State == EntityState.Added)
-                Log.Debug($"Entity: {entry.Entity.GetType().Name}, Date Created set: {entry.CurrentValues["DateCreated"]}");
+                if (dateUpdated != null && entry.State == EntityState.Modified)
+                    Log.Debug($"Entity: {entry.Entity.GetType().Name}, Date Updated after set: {dateUpdated}");
+            }
+
+            if (entry.OriginalValues.Properties.Any(p => p.Name == "DateCreated"))
+            {
+                var dateCreated = entry.CurrentValues["DateCreated"];
+
+                if (dateCreated != null && entry.State == EntityState.Added)
+                    Log.Debug($"Entity: {entry.Entity.GetType().Name}, Date Created set: {dateCreated}");
+            }
 
             if (entry.State == EntityState.Deleted)
             {

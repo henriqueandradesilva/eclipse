@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Domain.Entities;
 
-public class Task : BaseEntity
+public class Task : BaseGenericEntity
 {
     public Task()
     {

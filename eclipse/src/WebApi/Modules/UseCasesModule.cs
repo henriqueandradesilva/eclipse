@@ -1,3 +1,5 @@
+using Application.UseCases.V1.AuditLog.PostAuditLog;
+using Application.UseCases.V1.AuditLog.PostAuditLog.Interfaces;
 using Application.UseCases.V1.Project.DeleteProject;
 using Application.UseCases.V1.Project.DeleteProject.Interfaces;
 using Application.UseCases.V1.Project.GetListAllProject;
@@ -49,6 +51,9 @@ public static class UseCasesModule
         services.Decorate<IPostTaskUseCase, PostTaskValidationUseCase>();
         services.AddScoped<IPutTaskUseCase, PutTaskUseCase>();
         services.Decorate<IPutTaskUseCase, PutTaskValidationUseCase>();
+
+        services.AddScoped<IPostAuditLogUseCase, PostAuditLogUseCase>();
+        services.Decorate<IPostAuditLogUseCase, PostAuditLogValidationUseCase>();
 
         services.AddScoped<NotificationHelper, NotificationHelper>();
 
