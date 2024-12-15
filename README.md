@@ -49,19 +49,15 @@ git clone https://github.com/henriqueandradesilva/eclipse.git
 ## Configuração e Execução (Apenas Prompt)
 Para executar o projeto pelo terminal, siga os passos abaixo:
 1. **Abra o terminal e navegue até o diretório do projeto**
-Certifique-se de que você está no diretório raiz onde o arquivo .sln e o docker-compose.yml estão localizados.
-Exemplo:
+Certifique-se de que você está no diretório raiz onde o arquivo .sln e o docker-compose.yml estão localizados, Exemplo:
 cd /caminho/para/projeto
 2. **Compile o projeto usando o dotnet build**
-Antes de rodar os containers, compile a solução para garantir que não haja erros no código:
-Exemplo:
+Antes de rodar os containers, compile a solução para garantir que não haja erros no código, Exemplo:
 dotnet build
 3. **Execute o Docker Compose**
-Use o comando abaixo para iniciar o ambiente do Docker:
-Exemplo:
+Use o comando abaixo para iniciar o ambiente do Docker, Exemplo:
 docker-compose up -d
 4. **Acesse a documentação Swagger:**
-Exemplo:
 Abra o navegador e acesse: https://localhost:600100/swagger/index.html.
 
 ## Configuração e Execução (Com Visual Studio)
