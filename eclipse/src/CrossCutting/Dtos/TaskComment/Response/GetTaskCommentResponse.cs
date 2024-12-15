@@ -1,7 +1,8 @@
 using CrossCutting.Common.Dtos.Response;
+using CrossCutting.Dtos.Task.Response;
 using CrossCutting.Dtos.User.Response;
 
-namespace CrossCutting.Dtos.Task.Response;
+namespace CrossCutting.Dtos.TaskComment.Response;
 
 public class GetTaskCommentResponse : BaseResponse
 {

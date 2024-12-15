@@ -2,7 +2,7 @@ using CrossCutting.Common.Dtos.Request;
 using Domain.Common.Consts;
 using System.ComponentModel.DataAnnotations;
 
-namespace CrossCutting.Dtos.Task.Request;
+namespace CrossCutting.Dtos.TaskComment.Request;
 
 public class PutTaskCommentRequest : BaseRequest
 {

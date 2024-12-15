@@ -1,6 +1,6 @@
 using CrossCutting.Common.Dtos.Response;
 
-namespace CrossCutting.Dtos.Task.Response;
+namespace CrossCutting.Dtos.TaskComment.Response;
 
 public class PutTaskCommentResponse : BaseResponse
 {

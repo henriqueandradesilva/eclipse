@@ -22,6 +22,8 @@ public class SystemConst
 
     public const string FieldProjectId = "projectId";
 
+    public const string FieldTaskId = "taskId";
+
     public const string FieldUserId = "userId";
 
     public const string FieldStatus = "status";

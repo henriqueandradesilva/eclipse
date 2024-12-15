@@ -1,9 +1,10 @@
 using CrossCutting.Common.Dtos.Response;
+using CrossCutting.Dtos.Task.Response;
 using CrossCutting.Dtos.User.Response;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CrossCutting.Dtos.Task.Response;
+namespace CrossCutting.Dtos.TaskComment.Response;
 
 public class GetListTaskCommentResponse : BaseResponse
 {
