@@ -26,7 +26,7 @@ public class MessageConst
 
     public const string PriorityRequired = "O campo Prioridade é obrigatório.";
 
-    public const string MessageEmpty = "Nenhuma mensagem disponível.";
+    public const string MessageEmpty = "Nenhuma registro encontrado.";
 
     #endregion
 

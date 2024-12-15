@@ -1,8 +1,13 @@
 ﻿using Application.UseCases.V1.Reports.GetListProjectProgressReport.Interfaces;
+using CrossCutting.Const;
 using CrossCutting.Dtos.Reports.Response;
+using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
+using Domain.Common.Consts;
 using Domain.Common.Enums;
 using Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,25 +17,33 @@ public class GetListProjectProgressReportUseCase : IGetListProjectProgressReport
 {
     private IOutputPortWithNotFound<List<GetListProjectProgressReportResponse>> _outputPort;
     private readonly ITaskRepository _taskRepository;
+    private readonly NotificationHelper _notificationHelper;
 
-    public GetListProjectProgressReportUseCase(ITaskRepository taskRepository)
+    public GetListProjectProgressReportUseCase(
+        ITaskRepository taskRepository,
+        NotificationHelper notificationHelper)
     {
         _taskRepository = taskRepository;
+        _notificationHelper = notificationHelper;
     }
 
     public async System.Threading.Tasks.Task Execute()
     {
-        var listTask =
-            await _taskRepository.GetAllWithIncludes(t => t.Project);
+        var query =
+             _taskRepository.GetAllWithIncludes(t => t.Project);
 
-        if (listTask == null || !listTask.Any())
+        var result = await query?.ToListAsync();
+
+        if (result == null || !result.Any())
         {
+            _notificationHelper.Add(SystemConst.NotFound, MessageConst.MessageEmpty);
+
             _outputPort.NotFound();
 
             return;
         }
 
-        var report = listTask
+        var report = result
             .GroupBy(t => t.Project)
             .Select(g => new GetListProjectProgressReportResponse
             {

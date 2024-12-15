@@ -35,7 +35,7 @@ public interface IRepository<T> where T : class
 
     Task<List<T>> GetAll();
 
-    Task<List<T>> GetAllWithIncludes(
+    IQueryable<T> GetAllWithIncludes(
         params Expression<Func<T, object>>[] includes);
 
     IQueryable<T> FromSqlRaw(

@@ -4,6 +4,7 @@ using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
 using Domain.Common.Consts;
 using Domain.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace Application.UseCases.V1.Task.GetListAllTask;
@@ -24,10 +25,12 @@ public class GetListAllTaskUseCase : IGetListAllTaskUseCase
 
     public async System.Threading.Tasks.Task Execute()
     {
-        var result =
-            await _repository.GetAllWithIncludes(c => c.Project,
+        var query =
+             _repository.GetAllWithIncludes(c => c.Project,
                                                  c => c.User,
                                                  c => c.User.UserRole);
+
+        var result = await query?.ToListAsync();
 
         if (result == null || result.Count == 0)
         {

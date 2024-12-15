@@ -12,6 +12,8 @@ using Application.UseCases.V1.Project.PostProject;
 using Application.UseCases.V1.Project.PostProject.Interfaces;
 using Application.UseCases.V1.Project.PutProject;
 using Application.UseCases.V1.Project.PutProject.Interfaces;
+using Application.UseCases.V1.Reports.GetListAverageTasksCompletedReport;
+using Application.UseCases.V1.Reports.GetListAverageTasksCompletedReport.Interfaces;
 using Application.UseCases.V1.Reports.GetListDelayedProjectsReport;
 using Application.UseCases.V1.Reports.GetListDelayedProjectsReport.Interfaces;
 using Application.UseCases.V1.Reports.GetListProjectProgressReport;
@@ -62,6 +64,7 @@ public static class UseCasesModule
         services.AddScoped<IPostAuditLogUseCase, PostAuditLogUseCase>();
         services.Decorate<IPostAuditLogUseCase, PostAuditLogValidationUseCase>();
 
+        services.AddScoped<IGetListAverageTasksCompletedReportUseCase, GetListAverageTasksCompletedReportUseCase>();
         services.AddScoped<IGetListProjectProgressReportUseCase, GetListProjectProgressReportUseCase>();
         services.AddScoped<IGetListUserProductivityReportUseCase, GetListUserProductivityReportUseCase>();
         services.AddScoped<IGetListDelayedProjectsReportUseCase, GetListDelayedProjectsReportUseCase>();

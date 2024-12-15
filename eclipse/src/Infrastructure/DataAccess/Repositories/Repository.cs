@@ -63,7 +63,7 @@ public abstract class Repository<T> : IRepository<T> where T : BaseEntity
     public async virtual Task<List<T>> GetAll()
         => await Entity?.ToListAsync();
 
-    public async virtual Task<List<T>> GetAllWithIncludes(
+    public virtual IQueryable<T> GetAllWithIncludes(
         params Expression<Func<T, object>>[] includes)
     {
         IQueryable<T> query = Entity;
@@ -71,7 +71,7 @@ public abstract class Repository<T> : IRepository<T> where T : BaseEntity
         foreach (var include in includes)
             query = query.Include(include);
 
-        return await query?.ToListAsync();
+        return query;
     }
 
     public IQueryable<T> FromSqlRaw(
