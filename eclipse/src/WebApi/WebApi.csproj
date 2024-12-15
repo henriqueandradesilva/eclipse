@@ -24,6 +24,10 @@
 	  <None Remove="UseCases\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UseCases\V1\Reports\GetListProjectProgressReportController.cs" />
+    <Compile Include="UseCases\V1\Reports\GetListDelayedProjectsReportController.cs" />
+    <Compile Include="UseCases\V1\Reports\GetListTaskByPriorityReporController.cs" />
+    <Compile Include="UseCases\V1\Reports\GetListUserProductivityReportController.cs" />
     <Compile Include="UseCases\V1\Task\DeleteTaskController.cs" />
     <Compile Include="UseCases\V1\Task\GetListAllTaskController.cs" />
     <Compile Include="UseCases\V1\Task\GetListSearchTaskController.cs" />

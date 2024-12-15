@@ -12,6 +12,13 @@ using Application.UseCases.V1.Project.PostProject;
 using Application.UseCases.V1.Project.PostProject.Interfaces;
 using Application.UseCases.V1.Project.PutProject;
 using Application.UseCases.V1.Project.PutProject.Interfaces;
+using Application.UseCases.V1.Reports.GetListDelayedProjectsReport;
+using Application.UseCases.V1.Reports.GetListDelayedProjectsReport.Interfaces;
+using Application.UseCases.V1.Reports.GetListProjectProgressReport;
+using Application.UseCases.V1.Reports.GetListProjectProgressReport.Interfaces;
+using Application.UseCases.V1.Reports.GetListTaskByPriorityReport.Interfaces;
+using Application.UseCases.V1.Reports.GetListUserProductivityReport;
+using Application.UseCases.V1.Reports.GetListUserProductivityReport.Interfaces;
 using Application.UseCases.V1.Task.DeleteTask;
 using Application.UseCases.V1.Task.DeleteTask.Interfaces;
 using Application.UseCases.V1.Task.GetListAllTask;
@@ -54,6 +61,11 @@ public static class UseCasesModule
 
         services.AddScoped<IPostAuditLogUseCase, PostAuditLogUseCase>();
         services.Decorate<IPostAuditLogUseCase, PostAuditLogValidationUseCase>();
+
+        services.AddScoped<IGetListProjectProgressReportUseCase, GetListProjectProgressReportUseCase>();
+        services.AddScoped<IGetListUserProductivityReportUseCase, GetListUserProductivityReportUseCase>();
+        services.AddScoped<IGetListDelayedProjectsReportUseCase, GetListDelayedProjectsReportUseCase>();
+        services.AddScoped<IGetListTaskByPriorityReportUseCase, GetListTaskByPriorityReportUseCase>();
 
         services.AddScoped<NotificationHelper, NotificationHelper>();
 

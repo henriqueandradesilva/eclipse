@@ -12,11 +12,11 @@ public class SystemConst
 
     public const long UserRoleManagerIdDefault = 1;
 
-    public const long UserRoleDeveloperIdDefault = 2;
+    public const long UserRoleTeamIdDefault = 2;
 
     public const string Manager = "Gerente";
 
-    public const string Developer = "Desenvolvedor";
+    public const string Team = "Team";
 
     public const string Error = "Error";
 
