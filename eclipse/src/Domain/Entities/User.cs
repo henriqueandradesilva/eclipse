@@ -42,6 +42,8 @@ public class User : BaseGenericEntity
 
     public virtual ICollection<Task> ListTask { get; private set; } = new HashSet<Task>();
 
+    public virtual ICollection<TaskComment> ListTaskComment { get; private set; } = new HashSet<TaskComment>();
+
     public virtual ICollection<AuditLog> ListAuditLog { get; private set; } = new HashSet<AuditLog>();
 
     #region Validate

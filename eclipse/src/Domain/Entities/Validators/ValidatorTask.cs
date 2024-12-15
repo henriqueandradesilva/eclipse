@@ -19,7 +19,7 @@ public class ValidatorTask : AbstractValidator<Task>
 
         RuleFor(m => m.Description)
            .NotNull().NotEmpty().WithName(MessageConst.DescriptionRequired)
-           .MaximumLength(100).WithMessage(MessageConst.DescriptionMaxPermitted);
+           .MaximumLength(150).WithMessage(MessageConst.DescriptionMaxPermitted);
 
         RuleFor(r => r.ExpectedStartDate)
             .NotNull().WithMessage(MessageConst.ExpectedStartDateRequired)

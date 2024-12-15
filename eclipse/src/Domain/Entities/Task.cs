@@ -54,6 +54,8 @@ public class Task : BaseGenericEntity
 
     public virtual Project Project { get; private set; }
 
+    public virtual ICollection<TaskComment> ListTaskComment { get; private set; } = new HashSet<TaskComment>();
+
     #region Validate
 
     public override bool Valid()

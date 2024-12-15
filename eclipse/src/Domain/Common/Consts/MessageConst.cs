@@ -14,9 +14,11 @@ public class MessageConst
 
     public const string ActionNotPermitted = "Ação não permitida.";
 
-    public const string ProjectIdRequired = "O campo Projeto é obrigatório.";
+    public const string ProjectIdRequired = "O campo ProjetoId é obrigatório.";
 
-    public const string UserIdRequired = "O campo Usuário é obrigatório.";
+    public const string TaskIdRequired = "O campo TarefaId é obrigatória.";
+
+    public const string UserIdRequired = "O campo UsuarioId é obrigatório.";
 
     public const string ExpectedStartDateRequired = "O campo Data de Início é obrigatório.";
 
@@ -59,6 +61,18 @@ public class MessageConst
     public const string TaskNotChangedPriority = "Não é permitido alterar a prioridade de uma Tarefa.";
 
     public const string TaskMaxPermitted = $"O número máximo de tarefas permitido por projeto é de vinte";
+
+    #endregion
+
+    #region TaskComment
+
+    public const string TaskCommentCreated = "Comentário cadastrado com sucesso.";
+
+    public const string TaskCommentUpdated = "Comentário modificado com sucesso.";
+
+    public const string TaskCommentNotExist = "Nenhuma Comentário foi encontrado.";
+
+    public const string TaskCommentExist = "Esta Comentário já existe.";
 
     #endregion
 

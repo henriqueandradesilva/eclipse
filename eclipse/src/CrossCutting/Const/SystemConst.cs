@@ -6,17 +6,13 @@ public class SystemConst
 
     public const long TaskMaxPermitted = 20;
 
-    public const long UserManagerIdDefault = 1;
-
-    public const long UserDeveloperIdDefault = 2;
-
     public const long UserRoleManagerIdDefault = 1;
 
     public const long UserRoleTeamIdDefault = 2;
 
     public const string Manager = "Gerente";
 
-    public const string Team = "Team";
+    public const string Team = "Time";
 
     public const string Error = "Error";
 
