@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "64cb6b1c-15c0-40be-9c6a-ebb145672962",
+		"name": "7 - Eclipse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "projetos",
+			"item": [
+				{
+					"name": "Criação do Projeto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Novo Projeto - 2024\",\r\n  \"descricao\": \"Novo Projeto - 2024\",\r\n  \"dataInicio\": \"2024-12-15T15:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-25T15:43:36.557Z\",\r\n  \"status\": \"pendente\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/projetos",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"projetos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alteração do Projeto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Novo Projeto - 2025\",\r\n  \"descricao\": \"Novo Projeto - 2025\",\r\n  \"dataInicio\": \"2024-12-15T11:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-21T15:43:36.557Z\",\r\n  \"status\": \"emAndamento\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/projetos/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"projetos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Projeto Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/projetos/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"projetos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de Projetos Por UsuarioId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/projetos/consultar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"projetos",
+								"consultar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remoção do Projeto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/projetos/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"projetos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tarefas",
+			"item": [
+				{
+					"name": "Criação da Tarefa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"projetoId\": 11,\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Nova Tarefa - 2024\",\r\n  \"descricao\": \"Novo Tarefa - 2024\",\r\n  \"dataInicio\": \"2024-12-15T15:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-25T15:43:36.557Z\",\r\n  \"status\": \"pendente\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alteração da Tarefa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"projetoId\": 11,\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Nova Tarefa - 2025\",\r\n  \"descricao\": \"Nova Tarefa - 2025\",\r\n  \"dataInicio\": \"2024-12-15T11:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-21T15:43:36.557Z\",\r\n  \"status\": \"concluida\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/201",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alteração da Tarefa Prioridade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"projetoId\": 11,\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Novo Tarefa - 2025\",\r\n  \"descricao\": \"Novo Tarefa - 2025\",\r\n  \"dataInicio\": \"2024-12-15T11:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-21T15:43:36.557Z\",\r\n  \"status\": \"emAndamento\",\r\n  \"prioridade\": \"alta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/201",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Tarefa Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/201",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de Tarefas Por ProjetoId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"projectId\",\r\n      \"item2\": 11\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/consultar",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"consultar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remoção da Tarefa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criação da Tarefa Com Limite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"projetoId\": 1,\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Nova Tarefa - 2024\",\r\n  \"descricao\": \"Novo Tarefa - 2024\",\r\n  \"dataInicio\": \"2024-12-15T15:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-25T15:43:36.557Z\",\r\n  \"status\": \"pendente\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alteração da Tarefa Com Limite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"projetoId\": 1,\r\n  \"usuarioId\": 2,\r\n  \"titulo\": \"Novo Tarefa - 2025\",\r\n  \"descricao\": \"Novo Tarefa - 2025\",\r\n  \"dataInicio\": \"2024-12-15T11:43:36.557Z\",\r\n  \"dataVencimento\": \"2024-12-21T15:43:36.557Z\",\r\n  \"status\": \"emAndamento\",\r\n  \"prioridade\": \"baixa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:60100/api/v1/tarefas/201",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas",
+								"201"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "relatorios",
+			"item": [
+				{
+					"name": "Relatório de médio de tarefas concluídas por usuário nos últimos dias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:60100/api/v1/relatorios/media-tarefas-concluidas?daysInterval=30",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"media-tarefas-concluidas"
+							],
+							"query": [
+								{
+									"key": "daysInterval",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Relatório de progresso geral de projetos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:60100/api/v1/relatorios/progresso-geral",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"progresso-geral"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Relatório de projetos atrasados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:60100/api/v1/relatorios/projetos-atrasados",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"projetos-atrasados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Relatório de tarefas por prioridade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:60100/api/v1/relatorios/tarefas-por-prioridade",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"tarefas-por-prioridade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Relatório de produtividade por usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:60100/api/v1/relatorios/produtividade-usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"produtividade-usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
