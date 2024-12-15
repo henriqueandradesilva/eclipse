@@ -61,7 +61,8 @@ public static class SeedData
                         expectedStartDate: currentDate.AddDays(-random.Next(30, 90)),
                         expectedEndDate: currentDate.AddDays(random.Next(-30, 60)),
                         status: projectStatus,
-                        priority: random.Next(1, 3) == 1 ? PriorityEnum.Alta : PriorityEnum.Media
+                        priority: random.Next(1, 4) == 1 ? PriorityEnum.Alta :
+                                  random.Next(1, 4) == 2 ? PriorityEnum.Media : PriorityEnum.Baixa
                     );
                 }).ToArray()
             );
@@ -100,7 +101,7 @@ public static class SeedData
                             expectedStartDate: expectedStartDate,
                             expectedEndDate: expectedEndDate,
                             status: status,
-                            priority: taskId % 3 == 0 ? PriorityEnum.Alta : PriorityEnum.Media
+                            priority: taskId % 4 == 0 ? PriorityEnum.Baixa : (taskId % 3 == 0 ? PriorityEnum.Alta : PriorityEnum.Media)
                         );
                     });
                 }).ToArray()
