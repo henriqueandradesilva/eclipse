@@ -33,7 +33,7 @@ public class PostTaskUseCase : IPostTaskUseCase
 
         var result =
            await _repository?.Where(c => c.Title.ToUpper().Trim().Contains(normalizedTitle) &&
-                                         c.ProjectId == task.Id)
+                                         c.ProjectId == task.ProjectId)
                             ?.FirstOrDefaultAsync();
 
         if (result != null)
