@@ -33,6 +33,18 @@ using Application.UseCases.V1.Task.PostTask;
 using Application.UseCases.V1.Task.PostTask.Interfaces;
 using Application.UseCases.V1.Task.PutTask;
 using Application.UseCases.V1.Task.PutTask.Interfaces;
+using Application.UseCases.V1.TaskComment.DeleteTaskComment;
+using Application.UseCases.V1.TaskComment.DeleteTaskComment.Interfaces;
+using Application.UseCases.V1.TaskComment.GetListAllTaskComment;
+using Application.UseCases.V1.TaskComment.GetListAllTaskComment.Interfaces;
+using Application.UseCases.V1.TaskComment.GetListSearchTaskComment;
+using Application.UseCases.V1.TaskComment.GetListSearchTaskComment.Interfaces;
+using Application.UseCases.V1.TaskComment.GetTaskCommentById;
+using Application.UseCases.V1.TaskComment.GetTaskCommentById.Interfaces;
+using Application.UseCases.V1.TaskComment.PostTaskComment;
+using Application.UseCases.V1.TaskComment.PostTaskComment.Interfaces;
+using Application.UseCases.V1.TaskComment.PutTaskComment;
+using Application.UseCases.V1.TaskComment.PutTaskComment.Interfaces;
 using CrossCutting.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -60,6 +72,15 @@ public static class UseCasesModule
         services.Decorate<IPostTaskUseCase, PostTaskValidationUseCase>();
         services.AddScoped<IPutTaskUseCase, PutTaskUseCase>();
         services.Decorate<IPutTaskUseCase, PutTaskValidationUseCase>();
+
+        services.AddScoped<IDeleteTaskCommentUseCase, DeleteTaskCommentUseCase>();
+        services.AddScoped<IGetListAllTaskCommentUseCase, GetListAllTaskCommentUseCase>();
+        services.AddScoped<IGetListSearchTaskCommentUseCase, GetListSearchTaskCommentUseCase>();
+        services.AddScoped<IGetTaskCommentByIdUseCase, GetTaskCommentByIdUseCase>();
+        services.AddScoped<IPostTaskCommentUseCase, PostTaskCommentUseCase>();
+        services.Decorate<IPostTaskCommentUseCase, PostTaskCommentValidationUseCase>();
+        services.AddScoped<IPutTaskCommentUseCase, PutTaskCommentUseCase>();
+        services.Decorate<IPutTaskCommentUseCase, PutTaskCommentValidationUseCase>();
 
         services.AddScoped<IPostAuditLogUseCase, PostAuditLogUseCase>();
         services.Decorate<IPostAuditLogUseCase, PostAuditLogValidationUseCase>();

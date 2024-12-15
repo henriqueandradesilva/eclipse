@@ -44,6 +44,7 @@ public static class PostgreSqlModule
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<ITaskCommentRepository, TaskCommentRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserRoleRepository, UserRoleRepository>();
             services.AddScoped<IAuditLogRepository, AuditLogRepository>();
