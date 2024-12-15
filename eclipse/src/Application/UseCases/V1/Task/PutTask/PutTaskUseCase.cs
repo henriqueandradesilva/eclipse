@@ -1,3 +1,5 @@
+using Application.Services;
+using Application.UseCases.V1.AuditLog.PostAuditLog.Interfaces;
 using Application.UseCases.V1.Task.PutTask.Interfaces;
 using CrossCutting.Const;
 using CrossCutting.Extensions.UseCases;
@@ -6,22 +8,26 @@ using CrossCutting.Interfaces;
 using Domain.Common.Consts;
 using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Application.UseCases.V1.Task.PutTask;
 
 public class PutTaskUseCase : IPutTaskUseCase
 {
     private IOutputPort<Domain.Entities.Task> _outputPort;
+    private IPostAuditLogUseCase _postAuditLogUseCase;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ITaskRepository _repository;
     private readonly NotificationHelper _notificationHelper;
 
     public PutTaskUseCase(
         IUnitOfWork unitOfWork,
+        IPostAuditLogUseCase postAuditLogUseCase,
         ITaskRepository repository,
         NotificationHelper notificationHelper)
     {
         _unitOfWork = unitOfWork;
+        _postAuditLogUseCase = postAuditLogUseCase;
         _repository = repository;
         _notificationHelper = notificationHelper;
     }
@@ -78,6 +84,20 @@ public class PutTaskUseCase : IPutTaskUseCase
                         _outputPort.Error();
 
                         return;
+                    }
+
+                    var listDifference = AuditLogHelper.GetListDifference(task, result);
+
+                    foreach (var difference in listDifference)
+                    {
+                        var auditLog = new Domain.Entities.AuditLog(0, task.Id, task.UserId, difference.ToString(), DateTime.UtcNow, Domain.Common.Enums.TypeEntityEnum.Task);
+
+                        var auditLogOutputPort =
+                            new OutputPortService<Domain.Entities.AuditLog>(_notificationHelper);
+
+                        _postAuditLogUseCase.SetOutputPort(auditLogOutputPort);
+
+                        await _postAuditLogUseCase.Execute(auditLog);
                     }
 
                     task.Map(result);
