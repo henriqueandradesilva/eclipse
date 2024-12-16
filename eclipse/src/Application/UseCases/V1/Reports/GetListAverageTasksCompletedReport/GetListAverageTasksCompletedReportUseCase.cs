@@ -49,9 +49,10 @@ public class GetListAverageTasksCompletedReportUseCase : IGetListAverageTasksCom
 
         var intervalStartDate = DateTime.UtcNow.AddDays(-daysInterval);
 
-        var query = _repository.GetAllWithIncludes(t => t.User);
-
-        var tasks = await query?.Where(c => c.ExpectedEndDate >= intervalStartDate)?.ToListAsync();
+        var tasks =
+            await _repository?.Where(c => c.ExpectedEndDate >= intervalStartDate)
+                             ?.Include(c => c.User).ThenInclude(c => c.UserRole)
+                             ?.ToListAsync();
 
         if (tasks == null || !tasks.Any())
         {
@@ -62,7 +63,9 @@ public class GetListAverageTasksCompletedReportUseCase : IGetListAverageTasksCom
             return;
         }
 
-        var allUsers = await _userRepository.GetAll();
+        var allUsers =
+            await _userRepository?.Where(c => c.IsActive)
+                                 ?.ToListAsync();
 
         var usersWithTasks = tasks.Select(t => t.User).Distinct().ToList();
 
