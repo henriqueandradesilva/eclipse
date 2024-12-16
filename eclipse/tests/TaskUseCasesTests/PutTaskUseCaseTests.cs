@@ -1,4 +1,4 @@
-﻿using Application.UseCases.V1.AuditLog.PostAuditLog.Interfaces;
+﻿using Application.UseCases.V1.AuditLog.PostAuditLog;
 using Application.UseCases.V1.Task.PutTask;
 using CrossCutting.Const;
 using CrossCutting.Helpers;
@@ -51,13 +51,29 @@ public class PutTaskUseCaseTests
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
-        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
+        #region Audit Log
+
+        var mockAuditLogRepository = new Mock<IAuditLogRepository>();
+
+        mockAuditLogRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.AuditLog, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.AuditLog, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.AuditLog>().Where(predicate));
+
+        var mockPostAuditLogUseCase = new PostAuditLogUseCase(
+            mockUnitOfWork.Object,
+            mockAuditLogRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        #endregion
+
         var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
-            mockPostAuditLogUseCase.Object,
+            mockPostAuditLogUseCase,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
@@ -99,20 +115,38 @@ public class PutTaskUseCaseTests
 
         SeedMockData.Init(dbContext, true, true, true, true);
 
+
         var mockTaskRepository = new Mock<ITaskRepository>();
+
         mockTaskRepository
             .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
             .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
-        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
+        #region Audit Log
+
+        var mockAuditLogRepository = new Mock<IAuditLogRepository>();
+
+        mockAuditLogRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.AuditLog, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.AuditLog, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.AuditLog>().Where(predicate));
+
+        var mockPostAuditLogUseCase = new PostAuditLogUseCase(
+            mockUnitOfWork.Object,
+            mockAuditLogRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        #endregion
+
         var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
-            mockPostAuditLogUseCase.Object,
+            mockPostAuditLogUseCase,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
@@ -162,13 +196,29 @@ public class PutTaskUseCaseTests
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
-        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
+        #region Audit Log
+
+        var mockAuditLogRepository = new Mock<IAuditLogRepository>();
+
+        mockAuditLogRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.AuditLog, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.AuditLog, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.AuditLog>().Where(predicate));
+
+        var mockPostAuditLogUseCase = new PostAuditLogUseCase(
+            mockUnitOfWork.Object,
+            mockAuditLogRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        #endregion
+
         var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
-            mockPostAuditLogUseCase.Object,
+            mockPostAuditLogUseCase,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
