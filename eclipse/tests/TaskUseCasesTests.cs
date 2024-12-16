@@ -1,12 +1,11 @@
-using Application.UseCases.V1.Project.GetListSearchProject;
-using Application.UseCases.V1.Project.PostProject;
+using Application.UseCases.V1.Task.GetListSearchTask;
+using Application.UseCases.V1.Task.PostTask;
 using CrossCutting.Common.Dtos.Request;
 using CrossCutting.Common.Dtos.Response;
 using CrossCutting.Const;
 using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
 using Domain.Common.Consts;
-using Domain.Entities;
 using Domain.Repositories;
 using Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
@@ -16,11 +15,11 @@ using tests.Common;
 
 namespace eclipse.tests;
 
-public class ProjectUseCasesTests
+public class TaskUseCasesTests
 {
-    //Listagem de projetos
+    //Listagem de tarefas
     [Fact]
-    public void Execute_Should_Return_Filtered_Projects_By_UserId_And_Pagination()
+    public void Execute_Should_Return_Filtered_Tasks_By_UserId_And_Pagination()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -29,20 +28,21 @@ public class ProjectUseCasesTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, false);
+        SeedMockData.Init(dbContext, true, true, true, true);
 
-        var mockProjectRepository = new Mock<IProjectRepository>();
-        mockProjectRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Project, bool>>>()))
-            .Returns((Expression<Func<Project, bool>> predicate) =>
-                dbContext.Set<Project>().Where(predicate));
+        var mockTaskRepository = new Mock<ITaskRepository>();
+
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockNotificationHelper = new Mock<NotificationHelper>();
 
-        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Project>>>();
+        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Domain.Entities.Task>>>();
 
-        var useCase = new GetListSearchProjectUseCase(
-            mockProjectRepository.Object,
+        var useCase = new GetListSearchTaskUseCase(
+            mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
 
@@ -51,7 +51,7 @@ public class ProjectUseCasesTests
         var listaRelacionamento =
             new List<Tuple<string, long>>
         {
-            new Tuple<string, long>(SystemConst.FieldUserId, 1)
+            new Tuple<string, long>(SystemConst.FieldProjectId, 1)
         };
 
         var request = new GenericSearchPaginationRequest
@@ -68,10 +68,10 @@ public class ProjectUseCasesTests
 
         // Assert
         mockOutputPort.Verify(
-            op => op.Ok(It.Is<GenericPaginationResponse<Project>>(response =>
+            op => op.Ok(It.Is<GenericPaginationResponse<Domain.Entities.Task>>(response =>
                 response.ListaResultado.Count == 2 &&
-                response.ListaResultado.Any(p => p.Title == "Existing Project 1") &&
-                response.ListaResultado.Any(p => p.Title == "Existing Project 2") &&
+                response.ListaResultado.Any(p => p.Title == "Existing Task 1") &&
+                response.ListaResultado.Any(p => p.Title == "Existing Task 2") &&
                 response.Total == 2)),
             Times.Once);
 
@@ -79,65 +79,16 @@ public class ProjectUseCasesTests
         mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
     }
 
-    //Criação de projetos
+    //Criação de tarefas
     [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Success_When_Project_Is_Created_Successfully()
+    public async System.Threading.Tasks.Task Execute_Should_Return_Success_When_Task_Is_Created_Successfully()
     {
         // Arrange
-        var project = new Project(
+        var task = new Domain.Entities.Task(
             id: 0,
+            projectId: 1,
             userId: 1,
-            title: "New Project",
-            description: "Description",
-            expectedStartDate: DateTime.UtcNow,
-            expectedEndDate: DateTime.UtcNow.AddDays(5),
-            status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
-        );
-
-        var options = new DbContextOptionsBuilder<EclipseDbContext>()
-            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
-            .Options;
-
-        var dbContext = new EclipseDbContext(options);
-
-        SeedMockData.Init(dbContext, true, true, false, false);
-
-        var mockProjectRepository = new Mock<IProjectRepository>();
-        mockProjectRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Project, bool>>>()))
-            .Returns((Expression<Func<Project, bool>> predicate) =>
-                dbContext.Set<Project>().Where(predicate));
-
-        var mockUnitOfWork = new Mock<IUnitOfWork>();
-        var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Project>>();
-
-        var useCase = new PostProjectUseCase(
-            mockUnitOfWork.Object,
-            mockProjectRepository.Object,
-            mockNotificationHelper.Object
-        );
-
-        useCase.SetOutputPort(mockOutputPort.Object);
-
-        // Act
-        await useCase.Execute(project);
-
-        // Assert
-        mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
-        mockOutputPort.Verify(op => op.Ok(project), Times.Once);
-    }
-
-    //Verificar se projeto já existe
-    [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Project_Already_Exists()
-    {
-        // Arrange
-        var project = new Project(
-            id: 0,
-            userId: 1,
-            title: "Existing Project 1",
+            title: "New Task",
             description: "Description",
             expectedStartDate: DateTime.UtcNow,
             expectedEndDate: DateTime.UtcNow.AddDays(5),
@@ -153,41 +104,94 @@ public class ProjectUseCasesTests
 
         SeedMockData.Init(dbContext, true, true, true, false);
 
-        var mockProjectRepository = new Mock<IProjectRepository>();
-        mockProjectRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Project, bool>>>()))
-            .Returns((Expression<Func<Project, bool>> predicate) =>
-                dbContext.Set<Project>().Where(predicate));
+        var mockTaskRepository = new Mock<ITaskRepository>();
+
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Project>>();
+        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostProjectUseCase(
+        var useCase = new PostTaskUseCase(
             mockUnitOfWork.Object,
-            mockProjectRepository.Object,
+            mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
 
         useCase.SetOutputPort(mockOutputPort.Object);
 
         // Act
-        await useCase.Execute(project);
+        await useCase.Execute(task);
 
         // Assert
-        mockNotificationHelper.Verify(nh => nh.Add(SystemConst.Error, MessageConst.ProjectExist), Times.Once);
+        mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
+        mockOutputPort.Verify(op => op.Ok(task), Times.Once);
+    }
+
+    //Verificar se tarefa já existe
+    [Fact]
+    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Task_Already_Exists()
+    {
+        // Arrange
+        var task = new Domain.Entities.Task(
+            id: 0,
+            projectId: 1,
+            userId: 1,
+            title: "Existing Task 1",
+            description: "Description",
+            expectedStartDate: DateTime.UtcNow,
+            expectedEndDate: DateTime.UtcNow.AddDays(5),
+            status: Domain.Common.Enums.StatusEnum.Pendente,
+            priority: Domain.Common.Enums.PriorityEnum.Baixa
+        );
+
+        var options = new DbContextOptionsBuilder<EclipseDbContext>()
+            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
+            .Options;
+
+        var dbContext = new EclipseDbContext(options);
+
+        SeedMockData.Init(dbContext, true, true, true, true);
+
+        var mockTaskRepository = new Mock<ITaskRepository>();
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
+
+        var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockNotificationHelper = new Mock<NotificationHelper>();
+        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
+
+        var useCase = new PostTaskUseCase(
+            mockUnitOfWork.Object,
+            mockTaskRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        useCase.SetOutputPort(mockOutputPort.Object);
+
+        // Act
+        await useCase.Execute(task);
+
+        // Assert
+        mockNotificationHelper.Verify(nh => nh.Add(SystemConst.Error, MessageConst.TaskExist), Times.Once);
         mockOutputPort.Verify(op => op.Error(), Times.Once);
     }
 
     //Informar uma data de inicio maior que a data de vencimento
     [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Invalid_Project_Data_Provided()
+    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Invalid_Task_Data_Provided()
     {
         // Arrange
-        var project = new Project(
+        var Task = new Domain.Entities.Task(
             id: 0,
+            projectId: 1,
             userId: 1,
-            title: "New Project",
+            title: "New Task",
             description: "Description",
             expectedStartDate: DateTime.UtcNow.AddDays(5),
             expectedEndDate: DateTime.UtcNow,
@@ -201,27 +205,27 @@ public class ProjectUseCasesTests
 
         var dbContext = new EclipseDbContext(options);
 
-        var mockProjectRepository = new Mock<IProjectRepository>();
+        var mockTaskRepository = new Mock<ITaskRepository>();
 
-        mockProjectRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Project, bool>>>()))
-            .Returns((Expression<Func<Project, bool>> predicate) =>
-                dbContext.Set<Project>().Where(predicate));
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Project>>();
+        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostProjectUseCase(
+        var useCase = new PostTaskUseCase(
             mockUnitOfWork.Object,
-            mockProjectRepository.Object,
+            mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
 
         useCase.SetOutputPort(mockOutputPort.Object);
 
         // Act
-        await useCase.Execute(project);
+        await useCase.Execute(Task);
 
         // Assert
         mockNotificationHelper.Verify(
