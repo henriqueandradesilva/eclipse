@@ -46,7 +46,7 @@ public class GetListSearchTaskCommentUseCase : IGetListSearchTaskCommentUseCase
         {
             foreach (var relational in genericSearchPaginationRequest.ListaRelacionamento)
             {
-                if (relational.Item1.ToUpper() == SystemConst.FieldPriority.ToUpper())
+                if (relational.Item1.ToUpper() == SystemConst.FieldTaskId.ToUpper())
                     query = query.Where(c => c.TaskId == relational.Item2);
                 if (relational.Item1.ToUpper() == SystemConst.FieldUserId.ToUpper())
                     query = query.Where(c => c.UserId == relational.Item2);
