@@ -189,8 +189,8 @@ Regras de negócio:
 - A API deve fornecer endpoints para gerar relatórios de desempenho, como o número médio de tarefas concluídas por usuário nos últimos 30 dias. ✅
 - Os relatórios devem ser acessíveis apenas por usuários com uma função específica de "gerente". (NO)
 6.	Comentários nas Tarefas: 
-- Os usuários podem adicionar comentários a uma tarefa para fornecer informações adicionais. (NO)
-- Os comentários devem ser registrados no histórico de alterações da tarefa. (NO)
+- Os usuários podem adicionar comentários a uma tarefa para fornecer informações adicionais. ✅
+- Os comentários devem ser registrados no histórico de alterações da tarefa. ✅
 
 Regras da API e avaliação:
 
