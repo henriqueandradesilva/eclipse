@@ -1,11 +1,9 @@
-using Application.UseCases.V1.Task.GetListSearchTask;
-using Application.UseCases.V1.Task.PostTask;
+Ôªøusing Application.UseCases.V1.Task.GetListSearchTask;
 using CrossCutting.Common.Dtos.Request;
 using CrossCutting.Common.Dtos.Response;
 using CrossCutting.Const;
 using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
-using Domain.Common.Consts;
 using Domain.Repositories;
 using Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +11,13 @@ using Moq;
 using System.Linq.Expressions;
 using tests.Common;
 
-namespace eclipse.tests;
+namespace tests.TaskUseCasesTests;
 
-public class TaskUseCasesTests
+public class GetListSearchTaskUseCaseTests
 {
-    //Listagem de tarefas
+    /// <summary>
+    /// Listagem de tarefas por UserId
+    /// </summary>
     [Fact]
     public void Execute_Should_Return_Filtered_Tasks_By_UserId_And_Pagination()
     {
@@ -50,9 +50,9 @@ public class TaskUseCasesTests
 
         var listaRelacionamento =
             new List<Tuple<string, long>>
-        {
-            new Tuple<string, long>(SystemConst.FieldProjectId, 1)
-        };
+            {
+                new Tuple<string, long>(SystemConst.FieldUserId, 1)
+            };
 
         var request = new GenericSearchPaginationRequest
         {
@@ -79,131 +79,76 @@ public class TaskUseCasesTests
         mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
     }
 
-    //CriaÁ„o de tarefas
+    /// <summary>
+    /// Listagem de tarefas por UserId quando o UserId n√£o for encontrado
+    /// </summary>
     [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Success_When_Task_Is_Created_Successfully()
+    public void Execute_Should_Return_NotFound_When_UserId_Is_Not_Found()
     {
         // Arrange
-        var task = new Domain.Entities.Task(
-            id: 0,
-            projectId: 1,
-            userId: 1,
-            title: "New Task",
-            description: "Description",
-            expectedStartDate: DateTime.UtcNow,
-            expectedEndDate: DateTime.UtcNow.AddDays(5),
-            status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
-        );
-
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
             .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
             .Options;
 
-        var dbContext = new EclipseDbContext(options);
-
-        SeedMockData.Init(dbContext, true, true, true, false);
-
-        var mockTaskRepository = new Mock<ITaskRepository>();
-
-        mockTaskRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
-            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
-                dbContext.Set<Domain.Entities.Task>().Where(predicate));
-
-        var mockUnitOfWork = new Mock<IUnitOfWork>();
-        var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
-
-        var useCase = new PostTaskUseCase(
-            mockUnitOfWork.Object,
-            mockTaskRepository.Object,
-            mockNotificationHelper.Object
-        );
-
-        useCase.SetOutputPort(mockOutputPort.Object);
-
-        // Act
-        await useCase.Execute(task);
-
-        // Assert
-        mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
-        mockOutputPort.Verify(op => op.Ok(task), Times.Once);
-    }
-
-    //Verificar se tarefa j· existe
-    [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Task_Already_Exists()
-    {
-        // Arrange
-        var task = new Domain.Entities.Task(
-            id: 0,
-            projectId: 1,
-            userId: 1,
-            title: "Existing Task 1",
-            description: "Description",
-            expectedStartDate: DateTime.UtcNow,
-            expectedEndDate: DateTime.UtcNow.AddDays(5),
-            status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
-        );
-
-        var options = new DbContextOptionsBuilder<EclipseDbContext>()
-            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
-            .Options;
-
-        var dbContext = new EclipseDbContext(options);
+        using var dbContext = new EclipseDbContext(options);
 
         SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
+
         mockTaskRepository
             .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
             .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
-                dbContext.Set<Domain.Entities.Task>().Where(predicate));
+                dbContext.Set<Domain.Entities.Task>().Where(predicate).Where(task => task.UserId == 99999));
 
-        var mockUnitOfWork = new Mock<IUnitOfWork>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
+        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Domain.Entities.Task>>>();
 
-        var useCase = new PostTaskUseCase(
-            mockUnitOfWork.Object,
+        var useCase = new GetListSearchTaskUseCase(
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
 
         useCase.SetOutputPort(mockOutputPort.Object);
 
+        var listaRelacionamento =
+            new List<Tuple<string, long>>
+            {
+                new Tuple<string, long>(SystemConst.FieldUserId, 99999)
+            };
+
+        var request = new GenericSearchPaginationRequest
+        {
+            ListaRelacionamento = listaRelacionamento,
+            TamanhoPagina = 10,
+            PaginaAtual = 1,
+            CampoOrdenacao = "Title",
+            DirecaoOrdenacao = "asc"
+        };
+
         // Act
-        await useCase.Execute(task);
+        useCase.Execute(request);
 
         // Assert
-        mockNotificationHelper.Verify(nh => nh.Add(SystemConst.Error, MessageConst.TaskExist), Times.Once);
-        mockOutputPort.Verify(op => op.Error(), Times.Once);
+        mockOutputPort.Verify(
+            op => op.NotFound(),
+            Times.Once);
     }
 
-    //Informar uma data de inicio maior que a data de vencimento
+    /// <summary>
+    /// Listagem de tarefas por ProjectId
+    /// </summary>
     [Fact]
-    public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Invalid_Task_Data_Provided()
+    public void Execute_Should_Return_Filtered_Tasks_By_ProjectId_And_Pagination()
     {
         // Arrange
-        var Task = new Domain.Entities.Task(
-            id: 0,
-            projectId: 1,
-            userId: 1,
-            title: "New Task",
-            description: "Description",
-            expectedStartDate: DateTime.UtcNow.AddDays(5),
-            expectedEndDate: DateTime.UtcNow,
-            status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
-        );
-
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
             .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
             .Options;
 
-        var dbContext = new EclipseDbContext(options);
+        using var dbContext = new EclipseDbContext(options);
+
+        SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -212,26 +157,101 @@ public class TaskUseCasesTests
             .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
-        var mockUnitOfWork = new Mock<IUnitOfWork>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
-        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostTaskUseCase(
-            mockUnitOfWork.Object,
+        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Domain.Entities.Task>>>();
+
+        var useCase = new GetListSearchTaskUseCase(
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
 
         useCase.SetOutputPort(mockOutputPort.Object);
 
+        var listaRelacionamento =
+            new List<Tuple<string, long>>
+            {
+                new Tuple<string, long>(SystemConst.FieldProjectId, 1)
+            };
+
+        var request = new GenericSearchPaginationRequest
+        {
+            ListaRelacionamento = listaRelacionamento,
+            TamanhoPagina = 10,
+            PaginaAtual = 1,
+            CampoOrdenacao = "Title",
+            DirecaoOrdenacao = "asc"
+        };
+
         // Act
-        await useCase.Execute(Task);
+        useCase.Execute(request);
 
         // Assert
-        mockNotificationHelper.Verify(
-            nh => nh.Add(SystemConst.Error, MessageConst.MessageDatetimeError),
+        mockOutputPort.Verify(
+            op => op.Ok(It.Is<GenericPaginationResponse<Domain.Entities.Task>>(response =>
+                response.ListaResultado.Count == 2 &&
+                response.ListaResultado.Any(p => p.Title == "Existing Task 1") &&
+                response.ListaResultado.Any(p => p.Title == "Existing Task 2") &&
+                response.Total == 2)),
             Times.Once);
 
-        mockOutputPort.Verify(op => op.Error(), Times.Once);
+        mockOutputPort.Verify(op => op.NotFound(), Times.Never);
+        mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
+    }
+
+    /// <summary>
+    /// Listagem de tarefas por ProjectId quando o ProjectId n√£o for encontrado
+    /// </summary>
+    [Fact]
+    public void Execute_Should_Return_NotFound_When_ProjectId_Is_Not_Found()
+    {
+        // Arrange
+        var options = new DbContextOptionsBuilder<EclipseDbContext>()
+            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
+            .Options;
+
+        using var dbContext = new EclipseDbContext(options);
+
+        SeedMockData.Init(dbContext, true, true, true, true);
+
+        var mockTaskRepository = new Mock<ITaskRepository>();
+
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate).Where(task => task.ProjectId == 99999));
+
+        var mockNotificationHelper = new Mock<NotificationHelper>();
+        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Domain.Entities.Task>>>();
+
+        var useCase = new GetListSearchTaskUseCase(
+            mockTaskRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        useCase.SetOutputPort(mockOutputPort.Object);
+
+        var listaRelacionamento =
+            new List<Tuple<string, long>>
+            {
+                new Tuple<string, long>(SystemConst.FieldProjectId, 99999)
+            };
+
+        var request = new GenericSearchPaginationRequest
+        {
+            ListaRelacionamento = listaRelacionamento,
+            TamanhoPagina = 10,
+            PaginaAtual = 1,
+            CampoOrdenacao = "Title",
+            DirecaoOrdenacao = "asc"
+        };
+
+        // Act
+        useCase.Execute(request);
+
+        // Assert
+        mockOutputPort.Verify(
+            op => op.NotFound(),
+            Times.Once);
     }
 }

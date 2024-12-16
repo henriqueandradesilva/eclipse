@@ -1,7 +1,4 @@
-using Application.UseCases.V1.Project.GetListSearchProject;
-using Application.UseCases.V1.Project.PostProject;
-using CrossCutting.Common.Dtos.Request;
-using CrossCutting.Common.Dtos.Response;
+Ôªøusing Application.UseCases.V1.Project.PostProject;
 using CrossCutting.Const;
 using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
@@ -14,72 +11,11 @@ using Moq;
 using System.Linq.Expressions;
 using tests.Common;
 
-namespace eclipse.tests;
+namespace tests.ProjectUseCasesTests;
 
-public class ProjectUseCasesTests
+public class PostProjectUseCaseTests
 {
-    //Listagem de projetos
-    [Fact]
-    public void Execute_Should_Return_Filtered_Projects_By_UserId_And_Pagination()
-    {
-        // Arrange
-        var options = new DbContextOptionsBuilder<EclipseDbContext>()
-            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
-            .Options;
-
-        using var dbContext = new EclipseDbContext(options);
-
-        SeedMockData.Init(dbContext, true, true, true, false);
-
-        var mockProjectRepository = new Mock<IProjectRepository>();
-        mockProjectRepository
-            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Project, bool>>>()))
-            .Returns((Expression<Func<Project, bool>> predicate) =>
-                dbContext.Set<Project>().Where(predicate));
-
-        var mockNotificationHelper = new Mock<NotificationHelper>();
-
-        var mockOutputPort = new Mock<IOutputPortWithNotFound<GenericPaginationResponse<Project>>>();
-
-        var useCase = new GetListSearchProjectUseCase(
-            mockProjectRepository.Object,
-            mockNotificationHelper.Object
-        );
-
-        useCase.SetOutputPort(mockOutputPort.Object);
-
-        var listaRelacionamento =
-            new List<Tuple<string, long>>
-        {
-            new Tuple<string, long>(SystemConst.FieldUserId, 1)
-        };
-
-        var request = new GenericSearchPaginationRequest
-        {
-            ListaRelacionamento = listaRelacionamento,
-            TamanhoPagina = 10,
-            PaginaAtual = 1,
-            CampoOrdenacao = "Title",
-            DirecaoOrdenacao = "asc"
-        };
-
-        // Act
-        useCase.Execute(request);
-
-        // Assert
-        mockOutputPort.Verify(
-            op => op.Ok(It.Is<GenericPaginationResponse<Project>>(response =>
-                response.ListaResultado.Count == 2 &&
-                response.ListaResultado.Any(p => p.Title == "Existing Project 1") &&
-                response.ListaResultado.Any(p => p.Title == "Existing Project 2") &&
-                response.Total == 2)),
-            Times.Once);
-
-        mockOutputPort.Verify(op => op.NotFound(), Times.Never);
-        mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
-    }
-
-    //CriaÁ„o de projetos
+    //Cria√ß√£o de projetos
     [Fact]
     public async System.Threading.Tasks.Task Execute_Should_Return_Success_When_Project_Is_Created_Successfully()
     {
@@ -129,7 +65,7 @@ public class ProjectUseCasesTests
         mockOutputPort.Verify(op => op.Ok(project), Times.Once);
     }
 
-    //Verificar se projeto j· existe
+    //Verificar se projeto j√° existe
     [Fact]
     public async System.Threading.Tasks.Task Execute_Should_Return_Error_When_Project_Already_Exists()
     {
