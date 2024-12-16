@@ -155,17 +155,17 @@ Detalhes do App:
 
 1. Usuário
 
-1.1 Pessoa que utiliza o aplicativo detentor de uma conta. ✅
+- Pessoa que utiliza o aplicativo detentor de uma conta. ✅
 
 2. Projeto
 
-2.1 Um projeto é uma entidade que contém várias tarefas. ✅
+- Um projeto é uma entidade que contém várias tarefas. ✅
 
-2.2 Um usuário pode criar, visualizar e gerenciar vários projetos. ✅
+- Um usuário pode criar, visualizar e gerenciar vários projetos. ✅
 
 3. Tarefa
 
-3.1 Uma tarefa é uma unidade de trabalho dentro de um projeto. Cada tarefa possui um título, uma descrição, uma data de vencimento e um status (pendente, em andamento, concluída). ✅
+- Uma tarefa é uma unidade de trabalho dentro de um projeto. Cada tarefa possui um título, uma descrição, uma data de vencimento e um status (pendente, em andamento, concluída). ✅
 ________________________________________
 Fase 1: API Coding
 Para a primeira Sprint, foi estipulado o desenvolvimento de funcionalidades básicas para o gerenciamento de tarefas. Desenvolva uma RESTful API capaz de responder a requisições feitas pelo aplicativo para os seguintes itens:
