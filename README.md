@@ -37,8 +37,8 @@ Este projeto adota princípios de **Clean Architecture**, **Onion Architecture**
 
 ## Testes
 
-- **API Test**: Conjunto de testes automatizados para garantir a funcionalidade da API.
-- **Testcontainers**: Usado para testes de integração com ambientes isolados.
+- **Unit Test**: Conjunto de testes automatizados que verificam o comportamento de unidades específicas da aplicação 
+(como funções ou métodos) para garantir que elas funcionem corretamente de forma isolada.
 
 ## Instalação Docker e Clone
 1. **Certifique-se de que o Docker esteja instalado em sua máquina.** 
