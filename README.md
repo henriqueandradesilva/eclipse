@@ -7,7 +7,6 @@ Inspirado no repositório [Clean Architecture Manga](https://github.com/ivanpaul
 
 - **.NET 8 Web API**: Para construção da API.
 - **PostgreSQL**: Banco de dados relacional para armazenamento de dados.
-- **Testcontainers**: Para testes de integração com contêineres.
 - **Swagger**: Documentação da API e versionamento.
 - **Microsoft Extensions**: Para configuração e extensão da aplicação.
 
