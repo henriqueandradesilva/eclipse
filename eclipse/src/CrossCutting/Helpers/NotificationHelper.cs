@@ -13,7 +13,7 @@ public class NotificationHelper
     public bool HasMessage
         => Messages.Any();
 
-    public void Add(
+    public virtual void Add(
         string key,
         string message)
     {
