@@ -12,7 +12,8 @@ public static class SeedMockData
         bool initUserRole,
         bool initUser,
         bool initProject,
-        bool initTask)
+        bool initTask,
+        bool initTaskComment = false)
     {
 
         if (initUserRole)
@@ -384,6 +385,27 @@ public static class SeedMockData
             };
 
             dbContext.Set<Domain.Entities.Task>().AddRange(tasks);
+        }
+
+        if (initTask)
+        {
+            var taskComments = new List<Domain.Entities.TaskComment>
+            {
+                new Domain.Entities.TaskComment(
+                    id: 1,
+                    taskId: 1,
+                    userId: 1,
+                    description: "Description 1"
+                ),
+                new Domain.Entities.TaskComment(
+                    id: 2,
+                    taskId: 2,
+                    userId: 1,
+                    description: "Description 1"
+                )
+            };
+
+            dbContext.Set<Domain.Entities.TaskComment>().AddRange(taskComments);
         }
 
         await dbContext.SaveChangesAsync();

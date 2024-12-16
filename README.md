@@ -198,7 +198,7 @@ Regras da API e avaliação:
 
 1.	Não é necessário nenhum tipo de CRUD para usuários. ✅
 2.	Não é necessário nenhum tipo de autenticação; este será um serviço externo. ✅
-3.	Tenha pelo menos 80% de cobertura de testes de unidade para validar suas regras de negócio. (NO) 
+3.	Tenha pelo menos 80% de cobertura de testes de unidade para validar suas regras de negócio. ✅
 4.	Utilize o git como ferramenta de versionamento de código. ✅
 5.	Utilize um banco de dados (o que preferir) para salvar os dados. ✅
 6.	Utilize o framework e libs que julgue necessário para uma boa implementação. ✅

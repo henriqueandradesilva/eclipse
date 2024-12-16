@@ -110,7 +110,7 @@ public class PutTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        await SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
