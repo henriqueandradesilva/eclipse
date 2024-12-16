@@ -1,4 +1,5 @@
-﻿using Application.UseCases.V1.Task.PostTask;
+﻿using Application.UseCases.V1.AuditLog.PostAuditLog.Interfaces;
+using Application.UseCases.V1.Task.PutTask;
 using CrossCutting.Const;
 using CrossCutting.Helpers;
 using CrossCutting.Interfaces;
@@ -13,25 +14,25 @@ using tests.Common;
 namespace tests.TaskUseCasesTests;
 
 
-public class PostTaskUseCaseTests
+public class PutTaskUseCaseTests
 {
     /// <summary>
-    /// Criação de tarefas
+    /// Alteração de tarefas
     /// </summary>
     [Fact]
-    public async Task Execute_Should_Return_Success_When_Task_Is_Created_Successfully()
+    public async Task Execute_Should_Return_Success_When_Task_Is_Update_Successfully()
     {
         // Arrange
         var task = new Domain.Entities.Task(
-            id: 0,
+            id: 1,
             projectId: 1,
             userId: 1,
-            title: "New Task 1",
+            title: "Update Task 1",
             description: "Description 1",
             expectedStartDate: DateTime.UtcNow,
             expectedEndDate: DateTime.UtcNow.AddDays(5),
-            status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
+            status: Domain.Common.Enums.StatusEnum.EmAndamento,
+            priority: Domain.Common.Enums.PriorityEnum.Media
         );
 
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -40,7 +41,7 @@ public class PostTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, false);
+        SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -50,11 +51,13 @@ public class PostTaskUseCaseTests
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostTaskUseCase(
+        var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
+            mockPostAuditLogUseCase.Object,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
@@ -66,7 +69,7 @@ public class PostTaskUseCaseTests
 
         // Assert
         mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
-        mockOutputPort.Verify(op => op.Ok(task), Times.Once);
+        mockOutputPort.Verify(op => op.Ok(It.IsAny<Domain.Entities.Task>()), Times.Once);
     }
 
     /// <summary>
@@ -77,7 +80,7 @@ public class PostTaskUseCaseTests
     {
         // Arrange
         var task = new Domain.Entities.Task(
-            id: 0,
+            id: 2,
             projectId: 1,
             userId: 1,
             title: "Existing Task 1",
@@ -85,7 +88,7 @@ public class PostTaskUseCaseTests
             expectedStartDate: DateTime.UtcNow,
             expectedEndDate: DateTime.UtcNow.AddDays(5),
             status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
+            priority: Domain.Common.Enums.PriorityEnum.Media
         );
 
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -103,11 +106,13 @@ public class PostTaskUseCaseTests
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostTaskUseCase(
+        var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
+            mockPostAuditLogUseCase.Object,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
@@ -130,15 +135,15 @@ public class PostTaskUseCaseTests
     {
         // Arrange
         var Task = new Domain.Entities.Task(
-            id: 0,
+            id: 1,
             projectId: 1,
             userId: 1,
-            title: "New Task 1",
+            title: "Update Task 1",
             description: "Description 1",
             expectedStartDate: DateTime.UtcNow.AddDays(5),
             expectedEndDate: DateTime.UtcNow,
             status: Domain.Common.Enums.StatusEnum.Pendente,
-            priority: Domain.Common.Enums.PriorityEnum.Baixa
+            priority: Domain.Common.Enums.PriorityEnum.Media
         );
 
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -146,6 +151,8 @@ public class PostTaskUseCaseTests
             .Options;
 
         var dbContext = new EclipseDbContext(options);
+
+        SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -155,11 +162,13 @@ public class PostTaskUseCaseTests
                 dbContext.Set<Domain.Entities.Task>().Where(predicate));
 
         var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockPostAuditLogUseCase = new Mock<IPostAuditLogUseCase>();
         var mockNotificationHelper = new Mock<NotificationHelper>();
         var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
 
-        var useCase = new PostTaskUseCase(
+        var useCase = new PutTaskUseCase(
             mockUnitOfWork.Object,
+            mockPostAuditLogUseCase.Object,
             mockTaskRepository.Object,
             mockNotificationHelper.Object
         );
