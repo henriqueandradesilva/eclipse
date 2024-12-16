@@ -40,11 +40,12 @@ public class AverageTasksCompletedsReportController : CustomControllerBaseExtens
     [SwaggerOperation(Summary = "Relatório de médio de tarefas concluídas por usuário nos últimos dias.")]
     public async Task<IActionResult> GetAverageTasksCompletedsReport(
         [FromServices] IGetListAverageTasksCompletedReportUseCase useCase,
-        [FromQuery] int daysInterval = 30)
+        [FromQuery] long usuarioId,
+        [FromQuery] int intervaloDias = 30)
     {
         useCase.SetOutputPort(this);
 
-        await useCase.Execute(daysInterval);
+        await useCase.Execute(usuarioId, intervaloDias);
 
         return _viewModel!;
     }

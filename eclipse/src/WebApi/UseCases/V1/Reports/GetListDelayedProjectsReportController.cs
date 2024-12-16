@@ -39,11 +39,12 @@ public class DelayedProjectsReportController : CustomControllerBaseExtension, IO
     [ApiConventionMethod(typeof(CustomApiConvention), nameof(CustomApiConvention.List))]
     [SwaggerOperation(Summary = "Relatório de projetos atrasados")]
     public async Task<IActionResult> GetDelayedProjectsReport(
-        [FromServices] IGetListDelayedProjectsReportUseCase useCase)
+        [FromServices] IGetListDelayedProjectsReportUseCase useCase,
+        [FromQuery] long usuarioId)
     {
         useCase.SetOutputPort(this);
 
-        await useCase.Execute();
+        await useCase.Execute(usuarioId);
 
         return _viewModel!;
     }

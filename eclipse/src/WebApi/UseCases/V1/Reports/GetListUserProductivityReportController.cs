@@ -39,11 +39,12 @@ public class GetListUserProductivityReportController : CustomControllerBaseExten
     [ApiConventionMethod(typeof(CustomApiConvention), nameof(CustomApiConvention.List))]
     [SwaggerOperation(Summary = "Relatório de produtividade por usuário")]
     public async Task<IActionResult> GetUserProductivityReport(
-        [FromServices] IGetListUserProductivityReportUseCase useCase)
+        [FromServices] IGetListUserProductivityReportUseCase useCase,
+        [FromQuery] long usuarioId)
     {
         useCase.SetOutputPort(this);
 
-        await useCase.Execute();
+        await useCase.Execute(usuarioId);
 
         return _viewModel!;
     }

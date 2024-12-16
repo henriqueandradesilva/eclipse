@@ -39,11 +39,12 @@ public class TaskByPriorityReportController : CustomControllerBaseExtension, IOu
     [ApiConventionMethod(typeof(CustomApiConvention), nameof(CustomApiConvention.List))]
     [SwaggerOperation(Summary = "Relatório de tarefas por prioridade")]
     public async Task<IActionResult> GetTaskByPriorityReport(
-        [FromServices] IGetListTaskByPriorityReportUseCase useCase)
+        [FromServices] IGetListTaskByPriorityReportUseCase useCase,
+        [FromQuery] long usuarioId)
     {
         useCase.SetOutputPort(this);
 
-        await useCase.Execute();
+        await useCase.Execute(usuarioId);
 
         return _viewModel!;
     }

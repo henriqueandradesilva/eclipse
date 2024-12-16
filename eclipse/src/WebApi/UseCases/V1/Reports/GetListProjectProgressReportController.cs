@@ -39,11 +39,12 @@ public class GetListProjectProgressReportController : CustomControllerBaseExtens
     [ApiConventionMethod(typeof(CustomApiConvention), nameof(CustomApiConvention.List))]
     [SwaggerOperation(Summary = "Relatório de progresso geral de projetos")]
     public async Task<IActionResult> GetProjectProgressReport(
-        [FromServices] IGetListProjectProgressReportUseCase useCase)
+        [FromServices] IGetListProjectProgressReportUseCase useCase,
+        [FromQuery] long usuarioId)
     {
         useCase.SetOutputPort(this);
 
-        await useCase.Execute();
+        await useCase.Execute(usuarioId);
 
         return _viewModel!;
     }
