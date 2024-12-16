@@ -69,6 +69,63 @@ public class PostTaskUseCaseTests
         mockOutputPort.Verify(op => op.Ok(task), Times.Once);
     }
 
+    /// <summary> 
+    /// Teste que verifica a limitação de 20 tarefas por projeto.
+    /// </summary>
+    [Fact]
+    public async Task Execute_Should_Return_Error_When_Trying_To_Add_More_Than_20_Tasks()
+    {
+        // Arrange
+        var task = new Domain.Entities.Task(
+            id: 0,
+            projectId: 4,
+            userId: 1,
+            title: "New Task 21",
+            description: "Description for Task 21",
+            expectedStartDate: DateTime.UtcNow,
+            expectedEndDate: DateTime.UtcNow.AddDays(5),
+            status: Domain.Common.Enums.StatusEnum.Pendente,
+            priority: Domain.Common.Enums.PriorityEnum.Baixa
+        );
+
+        var options = new DbContextOptionsBuilder<EclipseDbContext>()
+            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
+            .Options;
+
+        var dbContext = new EclipseDbContext(options);
+
+        await SeedMockData.Init(dbContext, true, true, true, true);
+
+        var mockTaskRepository = new Mock<ITaskRepository>();
+
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
+
+        var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockNotificationHelper = new Mock<NotificationHelper>();
+        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
+
+        var useCase = new PostTaskUseCase(
+            mockUnitOfWork.Object,
+            mockTaskRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        useCase.SetOutputPort(mockOutputPort.Object);
+
+        // Act
+        await useCase.Execute(task);
+
+        // Assert
+        mockNotificationHelper.Verify(nh => nh.Add(
+            It.Is<string>(s => s == SystemConst.Error),
+            It.Is<string>(s => s == MessageConst.TaskMaxPermitted)), Times.Once);
+        mockOutputPort.Verify(op => op.Error(), Times.Once);
+        mockOutputPort.Verify(op => op.Ok(It.IsAny<Domain.Entities.Task>()), Times.Never);
+    }
+
     /// <summary>
     /// Verificar se tarefa já existe
     /// </summary>
