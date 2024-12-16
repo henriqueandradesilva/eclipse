@@ -159,7 +159,8 @@ Pessoa que utiliza o aplicativo detentor de uma conta. ✅
 
 - Projeto
 
-Um projeto é uma entidade que contém várias tarefas. Um usuário pode criar, visualizar e gerenciar vários projetos. ✅
+Um projeto é uma entidade que contém várias tarefas. ✅
+Um usuário pode criar, visualizar e gerenciar vários projetos. ✅
 
 - Tarefa
 
