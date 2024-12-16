@@ -32,7 +32,7 @@ public sealed class EclipseDbContext : DbContext
     public override async Task<int> SaveChangesAsync(
         CancellationToken cancellationToken = default)
     {
-        AuditLog();
+        //AuditLog();
 
         return await base.SaveChangesAsync(cancellationToken);
     }

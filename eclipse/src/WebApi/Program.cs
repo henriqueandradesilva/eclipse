@@ -8,9 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Prometheus;
-using Serilog;
-using Serilog.Events;
-using Serilog.Formatting.Compact;
 using System;
 using System.Globalization;
 using WebApi.Extensions;
@@ -36,17 +33,17 @@ builder.Services.AddProxy();
 builder.Services.AddCustomDataProtection();
 builder.Services.AddMemoryCache();
 
-builder.Host.UseSerilog((context, services, configuration) => configuration
-    .ReadFrom.Configuration(context.Configuration)
-    .Enrich.FromLogContext()
-    .Enrich.WithProperty("Application", context.HostingEnvironment.ApplicationName)
-    .WriteTo.Console()
-    .WriteTo.File(
-        formatter: new RenderedCompactJsonFormatter(),
-        path: "logs/log-.txt",
-        rollingInterval: RollingInterval.Day,
-        restrictedToMinimumLevel: LogEventLevel.Information
-    ));
+//builder.Host.UseSerilog((context, services, configuration) => configuration
+//    .ReadFrom.Configuration(context.Configuration)
+//    .Enrich.FromLogContext()
+//    .Enrich.WithProperty("Application", context.HostingEnvironment.ApplicationName)
+//    .WriteTo.Console()
+//    .WriteTo.File(
+//        formatter: new RenderedCompactJsonFormatter(),
+//        path: "logs/log-.txt",
+//        rollingInterval: RollingInterval.Day,
+//        restrictedToMinimumLevel: LogEventLevel.Error
+//    ));
 
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
 
