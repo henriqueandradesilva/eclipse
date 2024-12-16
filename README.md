@@ -24,7 +24,6 @@ Este projeto adota princípios de **Clean Architecture**, **Onion Architecture**
 
 - **EF Core**: Para acesso a dados com um padrão de repositório.
 - **Feature Flags**: Para ativação/desativação de funcionalidades em tempo real.
-- **Logging**: Implementação de registro de logs para monitoramento e depuração.
 - **Data Annotation**: Validação de dados nos modelos.
 
 ## Padrões e Práticas
