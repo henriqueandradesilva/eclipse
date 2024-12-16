@@ -50,9 +50,21 @@ public class TaskComment : BaseGenericEntity
 
     #region Extensions
 
+    public void AddUser(
+        User user)
+    {
+        if (user != null)
+            User = user;
+    }
+
     public override string ToString()
     {
-        return $"Comentário: {Description}, Usuário: {User.Name}, Data Criação: {DateCreated}, Data Alteração: {DateUpdated} ";
+        var message = string.Empty;
+
+        if (DateUpdated != null)
+            return $"Comentário Modificado: {Description}, Usuário: {User.Name}, Data Criação: {DateCreated}, Data Alteração: {DateUpdated} ";
+
+        return $"Comentário Criado: {Description}, Usuário: {User.Name}, Data Criação: {DateCreated}";
     }
 
     #endregion

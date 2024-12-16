@@ -18,17 +18,20 @@ public class PutTaskCommentUseCase : IPutTaskCommentUseCase
     private IPostAuditLogUseCase _postAuditLogUseCase;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ITaskCommentRepository _repository;
+    private readonly IUserRepository _userRepository;
     private readonly NotificationHelper _notificationHelper;
 
     public PutTaskCommentUseCase(
         IUnitOfWork unitOfWork,
         IPostAuditLogUseCase postAuditLogUseCase,
         ITaskCommentRepository repository,
+        IUserRepository userRepository,
         NotificationHelper notificationHelper)
     {
         _unitOfWork = unitOfWork;
         _postAuditLogUseCase = postAuditLogUseCase;
         _repository = repository;
+        _userRepository = userRepository;
         _notificationHelper = notificationHelper;
     }
 
@@ -66,15 +69,6 @@ public class PutTaskCommentUseCase : IPutTaskCommentUseCase
             }
             else
             {
-                var auditLog = new Domain.Entities.AuditLog(0, taskComment.TaskId, taskComment.UserId, taskComment.ToString(), DateTime.UtcNow, Domain.Common.Enums.TypeEntityEnum.Task);
-
-                var auditLogOutputPort =
-                    new OutputPortService<Domain.Entities.AuditLog>(_notificationHelper);
-
-                _postAuditLogUseCase.SetOutputPort(auditLogOutputPort);
-
-                await _postAuditLogUseCase.Execute(auditLog);
-
                 taskComment.Map(result);
 
                 result.SetDateUpdated();
@@ -92,7 +86,24 @@ public class PutTaskCommentUseCase : IPutTaskCommentUseCase
                     _outputPort.Error();
                 }
                 else
+                {
+                    var user =
+                        await _userRepository?.Where(c => c.Id == taskComment.UserId)
+                                             ?.FirstOrDefaultAsync();
+
+                    result.AddUser(user);
+
+                    var auditLog = new Domain.Entities.AuditLog(0, result.TaskId, result.UserId, result.ToString(), DateTime.UtcNow, Domain.Common.Enums.TypeEntityEnum.Task);
+
+                    var auditLogOutputPort =
+                        new OutputPortService<Domain.Entities.AuditLog>(_notificationHelper);
+
+                    _postAuditLogUseCase.SetOutputPort(auditLogOutputPort);
+
+                    await _postAuditLogUseCase.Execute(auditLog);
+
                     _outputPort.Ok(result);
+                }
             }
         }
     }

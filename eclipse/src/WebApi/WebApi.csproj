@@ -29,6 +29,12 @@
     <Compile Include="UseCases\V1\Reports\GetListDelayedProjectsReportController.cs" />
     <Compile Include="UseCases\V1\Reports\GetListTaskByPriorityReporController.cs" />
     <Compile Include="UseCases\V1\Reports\GetListUserProductivityReportController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\DeleteTaskCommentController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\GetListAllTaskCommentController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\GetListSearchTaskCommentController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\GetTaskCommentByIdController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\PostTaskCommentController.cs" />
+    <Compile Include="UseCases\V1\TaskComment\PutTaskCommentController.cs" />
     <Compile Include="UseCases\V1\Task\DeleteTaskController.cs" />
     <Compile Include="UseCases\V1\Task\GetListAllTaskController.cs" />
     <Compile Include="UseCases\V1\Task\GetListSearchTaskController.cs" />
