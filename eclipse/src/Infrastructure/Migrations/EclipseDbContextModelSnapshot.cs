@@ -112,9 +112,9 @@ namespace Infrastructure.Migrations
                             Id = 1L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 1",
-                            ExpectedEndDate = new DateTime(2024, 12, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            Priority = "Alta",
+                            ExpectedEndDate = new DateTime(2025, 2, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            Priority = "Baixa",
                             Status = "Pendente",
                             Title = "Projeto 1",
                             UserId = 2L
@@ -124,8 +124,8 @@ namespace Infrastructure.Migrations
                             Id = 2L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 2",
-                            ExpectedEndDate = new DateTime(2024, 12, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             Status = "Pendente",
                             Title = "Projeto 2",
@@ -136,9 +136,9 @@ namespace Infrastructure.Migrations
                             Id = 3L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 3",
-                            ExpectedEndDate = new DateTime(2025, 2, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            Priority = "Alta",
+                            ExpectedEndDate = new DateTime(2024, 11, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            Priority = "Baixa",
                             Status = "Pendente",
                             Title = "Projeto 3",
                             UserId = 4L
@@ -148,9 +148,9 @@ namespace Infrastructure.Migrations
                             Id = 4L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 4",
-                            ExpectedEndDate = new DateTime(2024, 12, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            Priority = "Alta",
+                            ExpectedEndDate = new DateTime(2025, 1, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            Priority = "Media",
                             Status = "Pendente",
                             Title = "Projeto 4",
                             UserId = 5L
@@ -160,8 +160,8 @@ namespace Infrastructure.Migrations
                             Id = 5L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 5",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2025, 1, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             Status = "Pendente",
                             Title = "Projeto 5",
@@ -172,8 +172,8 @@ namespace Infrastructure.Migrations
                             Id = 6L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 6",
-                            ExpectedEndDate = new DateTime(2025, 1, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             Status = "Pendente",
                             Title = "Projeto 6",
@@ -184,10 +184,10 @@ namespace Infrastructure.Migrations
                             Id = 7L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 7",
-                            ExpectedEndDate = new DateTime(2025, 1, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Projeto 7",
                             UserId = 3L
                         },
@@ -196,9 +196,9 @@ namespace Infrastructure.Migrations
                             Id = 8L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 8",
-                            ExpectedEndDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            Priority = "Alta",
+                            ExpectedEndDate = new DateTime(2025, 2, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            Priority = "Media",
                             Status = "Pendente",
                             Title = "Projeto 8",
                             UserId = 4L
@@ -208,9 +208,9 @@ namespace Infrastructure.Migrations
                             Id = 9L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 9",
-                            ExpectedEndDate = new DateTime(2024, 12, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            Priority = "Media",
+                            ExpectedEndDate = new DateTime(2024, 11, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            Priority = "Baixa",
                             Status = "Pendente",
                             Title = "Projeto 9",
                             UserId = 5L
@@ -220,8 +220,8 @@ namespace Infrastructure.Migrations
                             Id = 10L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição do Projeto 10",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             Status = "Pendente",
                             Title = "Projeto 10",
@@ -289,21 +289,21 @@ namespace Infrastructure.Migrations
                             Id = 1L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 1 do Projeto 1",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 2L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 11, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
                             Status = "Pendente",
@@ -315,24 +315,24 @@ namespace Infrastructure.Migrations
                             Id = 3L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 3 do Projeto 1",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 4L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 1L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 1",
                             UserId = 1L
                         },
@@ -341,37 +341,37 @@ namespace Infrastructure.Migrations
                             Id = 5L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 10, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 5 do Projeto 1",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 6L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 6 do Projeto 1",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 7L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 11, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 7 do Projeto 1",
                             UserId = 4L
                         },
@@ -380,47 +380,47 @@ namespace Infrastructure.Migrations
                             Id = 8L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 1L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 8 do Projeto 1",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 9L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 12, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 1L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 9 do Projeto 1",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 10L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 10 do Projeto 1",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 11L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 8, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
                             Status = "Concluida",
@@ -432,128 +432,128 @@ namespace Infrastructure.Migrations
                             Id = 12L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 12 do Projeto 1",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 13L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 13 do Projeto 1",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 14L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 14 do Projeto 1",
-                            UserId = 4L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 15L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 1L,
                             Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 1",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 16L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 10, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 16 do Projeto 1",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 17L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 9, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
                             Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 1",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 18L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 10, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 8, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 1L,
                             Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 1",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 19L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 11, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 1L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 19 do Projeto 1",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 20L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 1.",
-                            ExpectedEndDate = new DateTime(2024, 12, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 1L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 20 do Projeto 1",
-                            UserId = 4L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 21L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 8, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 1 do Projeto 2",
                             UserId = 2L
                         },
@@ -562,50 +562,50 @@ namespace Infrastructure.Migrations
                             Id = 22L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 2 do Projeto 2",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 23L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 12, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 2L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 3 do Projeto 2",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 24L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 12, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 2L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 2",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 25L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 12, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 5 do Projeto 2",
                             UserId = 3L
                         },
@@ -614,63 +614,63 @@ namespace Infrastructure.Migrations
                             Id = 26L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 9, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 2L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 6 do Projeto 2",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 27L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
                             Status = "EmAndamento",
                             Title = "Tarefa 7 do Projeto 2",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 28L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 2L,
                             Status = "Concluida",
                             Title = "Tarefa 8 do Projeto 2",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 29L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 2L,
                             Status = "Pendente",
                             Title = "Tarefa 9 do Projeto 2",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 30L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 10 do Projeto 2",
                             UserId = 1L
                         },
@@ -679,47 +679,47 @@ namespace Infrastructure.Migrations
                             Id = 31L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 11 do Projeto 2",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 32L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 2L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 12 do Projeto 2",
-                            UserId = 4L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 33L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
                             Status = "Concluida",
                             Title = "Tarefa 13 do Projeto 2",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 34L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
                             Status = "Concluida",
@@ -731,86 +731,86 @@ namespace Infrastructure.Migrations
                             Id = 35L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 2L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 15 do Projeto 2",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 36L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 2L,
                             Status = "Concluida",
                             Title = "Tarefa 16 do Projeto 2",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 37L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 2",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 38L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 10, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 2L,
                             Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 2",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 39L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 2L,
                             Status = "Concluida",
                             Title = "Tarefa 19 do Projeto 2",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 40L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 2.",
-                            ExpectedEndDate = new DateTime(2024, 11, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 2L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 2",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 41L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 9, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
                             Status = "Concluida",
@@ -822,86 +822,86 @@ namespace Infrastructure.Migrations
                             Id = 42L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 2 do Projeto 3",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 43L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 11, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 3L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 3 do Projeto 3",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 44L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 3L,
                             Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 3",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 45L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 12, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 5 do Projeto 3",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 46L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 3L,
                             Status = "Pendente",
                             Title = "Tarefa 6 do Projeto 3",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 47L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 9, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 7 do Projeto 3",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 48L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 3L,
                             Status = "Pendente",
@@ -913,37 +913,37 @@ namespace Infrastructure.Migrations
                             Id = 49L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 11, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 3L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 9 do Projeto 3",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 50L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 11, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
                             Status = "Concluida",
                             Title = "Tarefa 10 do Projeto 3",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 51L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 11, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 11 do Projeto 3",
                             UserId = 3L
                         },
@@ -952,37 +952,37 @@ namespace Infrastructure.Migrations
                             Id = 52L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 3L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 12 do Projeto 3",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 53L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 13 do Projeto 3",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 54L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 14 do Projeto 3",
                             UserId = 4L
                         },
@@ -991,24 +991,24 @@ namespace Infrastructure.Migrations
                             Id = 55L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 3L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 15 do Projeto 3",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 56L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 8, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 3L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 16 do Projeto 3",
                             UserId = 1L
                         },
@@ -1017,11 +1017,11 @@ namespace Infrastructure.Migrations
                             Id = 57L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 3",
                             UserId = 3L
                         },
@@ -1030,47 +1030,47 @@ namespace Infrastructure.Migrations
                             Id = 58L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 3L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 3",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 59L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 11, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 3L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 19 do Projeto 3",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 60L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 3.",
-                            ExpectedEndDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 3L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 3",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 61L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
                             Status = "Concluida",
@@ -1082,47 +1082,47 @@ namespace Infrastructure.Migrations
                             Id = 62L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
                             Status = "Concluida",
                             Title = "Tarefa 2 do Projeto 4",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 63L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 10, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 4L,
                             Status = "Concluida",
                             Title = "Tarefa 3 do Projeto 4",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 64L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 10, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 4L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 4",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 65L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
                             Status = "EmAndamento",
@@ -1134,50 +1134,50 @@ namespace Infrastructure.Migrations
                             Id = 66L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 4L,
                             Status = "Pendente",
                             Title = "Tarefa 6 do Projeto 4",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 67L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 7 do Projeto 4",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 68L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 4L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 8 do Projeto 4",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 69L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 4L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 9 do Projeto 4",
                             UserId = 1L
                         },
@@ -1186,24 +1186,24 @@ namespace Infrastructure.Migrations
                             Id = 70L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 10 do Projeto 4",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 71L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 11 do Projeto 4",
                             UserId = 2L
                         },
@@ -1212,99 +1212,99 @@ namespace Infrastructure.Migrations
                             Id = 72L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 4L,
                             Status = "Concluida",
                             Title = "Tarefa 12 do Projeto 4",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 73L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 13 do Projeto 4",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 74L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 14 do Projeto 4",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 75L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 4L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 15 do Projeto 4",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 76L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 4L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 16 do Projeto 4",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 77L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 4",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 78L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 4L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 18 do Projeto 4",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 79L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 11, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 4L,
                             Status = "Concluida",
@@ -1316,24 +1316,24 @@ namespace Infrastructure.Migrations
                             Id = 80L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 4.",
-                            ExpectedEndDate = new DateTime(2024, 9, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 4L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 20 do Projeto 4",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 81L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 11, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 1 do Projeto 5",
                             UserId = 4L
                         },
@@ -1342,11 +1342,11 @@ namespace Infrastructure.Migrations
                             Id = 82L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 12, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 2 do Projeto 5",
                             UserId = 3L
                         },
@@ -1355,8 +1355,8 @@ namespace Infrastructure.Migrations
                             Id = 83L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 5L,
                             Status = "Pendente",
@@ -1368,141 +1368,141 @@ namespace Infrastructure.Migrations
                             Id = 84L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 4 do Projeto 5",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 85L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 9, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 5 do Projeto 5",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 86L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 8, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 31, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 5L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 6 do Projeto 5",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 87L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 9, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
                             Status = "Concluida",
                             Title = "Tarefa 7 do Projeto 5",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 88L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 5L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 8 do Projeto 5",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 89L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 12, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 9 do Projeto 5",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 90L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 9, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
                             Status = "Concluida",
                             Title = "Tarefa 10 do Projeto 5",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 91L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 11 do Projeto 5",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 92L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 5L,
                             Status = "Pendente",
                             Title = "Tarefa 12 do Projeto 5",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 93L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
                             Status = "Pendente",
                             Title = "Tarefa 13 do Projeto 5",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 94L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 9, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 14 do Projeto 5",
                             UserId = 3L
                         },
@@ -1511,34 +1511,34 @@ namespace Infrastructure.Migrations
                             Id = 95L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 5",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 96L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 5L,
                             Status = "Pendente",
                             Title = "Tarefa 16 do Projeto 5",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 97L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 9, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
                             Status = "Concluida",
@@ -1550,167 +1550,167 @@ namespace Infrastructure.Migrations
                             Id = 98L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 12, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 5L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 5",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 99L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 5L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 19 do Projeto 5",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 100L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 5.",
-                            ExpectedEndDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 5L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 5",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 101L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 11, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 1 do Projeto 6",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 102L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
                             Status = "Concluida",
                             Title = "Tarefa 2 do Projeto 6",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 103L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 6L,
                             Status = "Concluida",
                             Title = "Tarefa 3 do Projeto 6",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 104L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 6L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 4 do Projeto 6",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 105L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 12, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
                             Status = "EmAndamento",
                             Title = "Tarefa 5 do Projeto 6",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 106L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 6L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 6 do Projeto 6",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 107L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 12, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 7 do Projeto 6",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 108L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 6L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 8 do Projeto 6",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 109L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 6L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 9 do Projeto 6",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 110L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 11, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 8, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 10 do Projeto 6",
                             UserId = 3L
                         },
@@ -1719,76 +1719,76 @@ namespace Infrastructure.Migrations
                             Id = 111L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 11 do Projeto 6",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 112L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 6L,
                             Status = "Pendente",
                             Title = "Tarefa 12 do Projeto 6",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 113L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 13 do Projeto 6",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 114L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
                             Status = "Concluida",
                             Title = "Tarefa 14 do Projeto 6",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 115L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 6L,
                             Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 6",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 116L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 6L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 16 do Projeto 6",
                             UserId = 4L
                         },
@@ -1797,24 +1797,24 @@ namespace Infrastructure.Migrations
                             Id = 117L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 17 do Projeto 6",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 118L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 6L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 6",
                             UserId = 3L
                         },
@@ -1823,37 +1823,37 @@ namespace Infrastructure.Migrations
                             Id = 119L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 6L,
                             Status = "Pendente",
                             Title = "Tarefa 19 do Projeto 6",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 120L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 6.",
-                            ExpectedEndDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 6L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 6",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 121L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 1 do Projeto 7",
                             UserId = 2L
                         },
@@ -1862,11 +1862,11 @@ namespace Infrastructure.Migrations
                             Id = 122L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 2 do Projeto 7",
                             UserId = 4L
                         },
@@ -1875,125 +1875,125 @@ namespace Infrastructure.Migrations
                             Id = 123L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 7L,
                             Status = "Concluida",
                             Title = "Tarefa 3 do Projeto 7",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 124L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 10, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 4 do Projeto 7",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 125L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 8, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
                             Status = "Pendente",
                             Title = "Tarefa 5 do Projeto 7",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 126L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 6 do Projeto 7",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 127L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 7 do Projeto 7",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 128L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 7L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 8 do Projeto 7",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 129L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 7L,
                             Status = "Concluida",
                             Title = "Tarefa 9 do Projeto 7",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 130L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 10 do Projeto 7",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 131L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 11, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
                             Status = "Pendente",
                             Title = "Tarefa 11 do Projeto 7",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 132L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 7L,
                             Status = "Concluida",
@@ -2005,21 +2005,21 @@ namespace Infrastructure.Migrations
                             Id = 133L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 11, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 13 do Projeto 7",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 134L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 16, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 8, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
                             Status = "Concluida",
@@ -2031,125 +2031,125 @@ namespace Infrastructure.Migrations
                             Id = 135L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 7L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 7",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 136L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 7L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 16 do Projeto 7",
-                            UserId = 4L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 137L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 12, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
                             Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 7",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 138L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 11, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 7L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 7",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 139L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 7L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 19 do Projeto 7",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 140L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 7.",
-                            ExpectedEndDate = new DateTime(2024, 9, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 7L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 7",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 141L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 11, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 1 do Projeto 8",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 142L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 10, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 2 do Projeto 8",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 143L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 10, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 3 do Projeto 8",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 144L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 8L,
                             Status = "Concluida",
@@ -2161,24 +2161,24 @@ namespace Infrastructure.Migrations
                             Id = 145L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 11, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 5 do Projeto 8",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 146L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 8L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 6 do Projeto 8",
                             UserId = 4L
                         },
@@ -2187,89 +2187,89 @@ namespace Infrastructure.Migrations
                             Id = 147L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 12, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 7 do Projeto 8",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 148L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 8L,
                             Status = "EmAndamento",
                             Title = "Tarefa 8 do Projeto 8",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 149L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 12, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 8L,
                             Status = "Pendente",
                             Title = "Tarefa 9 do Projeto 8",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 150L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 25, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
                             Status = "Concluida",
                             Title = "Tarefa 10 do Projeto 8",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 151L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 29, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 11 do Projeto 8",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 152L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 8L,
                             Status = "EmAndamento",
                             Title = "Tarefa 12 do Projeto 8",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 153L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 13 do Projeto 8",
                             UserId = 4L
                         },
@@ -2278,24 +2278,24 @@ namespace Infrastructure.Migrations
                             Id = 154L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 13, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 14 do Projeto 8",
-                            UserId = 2L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 155L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 11, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 7, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 15 do Projeto 8",
                             UserId = 3L
                         },
@@ -2304,8 +2304,8 @@ namespace Infrastructure.Migrations
                             Id = 156L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 9, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 24, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 8L,
                             Status = "Concluida",
@@ -2317,50 +2317,50 @@ namespace Infrastructure.Migrations
                             Id = 157L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 10, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 17 do Projeto 8",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 158L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 12, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 8L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 18 do Projeto 8",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 159L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 12, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 8L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 19 do Projeto 8",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 160L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 8.",
-                            ExpectedEndDate = new DateTime(2024, 10, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 8L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 8",
                             UserId = 4L
                         },
@@ -2369,8 +2369,8 @@ namespace Infrastructure.Migrations
                             Id = 161L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 27, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
                             Status = "EmAndamento",
@@ -2382,50 +2382,50 @@ namespace Infrastructure.Migrations
                             Id = 162L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 10, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 2 do Projeto 9",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 163L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 9L,
                             Status = "EmAndamento",
                             Title = "Tarefa 3 do Projeto 9",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 164L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 9L,
                             Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 9",
-                            UserId = 3L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 165L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 9, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 5 do Projeto 9",
                             UserId = 2L
                         },
@@ -2434,34 +2434,34 @@ namespace Infrastructure.Migrations
                             Id = 166L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 9L,
                             Status = "EmAndamento",
                             Title = "Tarefa 6 do Projeto 9",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 167L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 7 do Projeto 9",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 168L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 9L,
                             Status = "Concluida",
@@ -2473,50 +2473,50 @@ namespace Infrastructure.Migrations
                             Id = 169L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 9L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 9 do Projeto 9",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 170L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 9, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 22, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 10 do Projeto 9",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 171L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 11 do Projeto 9",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 172L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 9, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 9L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 12 do Projeto 9",
                             UserId = 1L
                         },
@@ -2525,102 +2525,102 @@ namespace Infrastructure.Migrations
                             Id = 173L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
                             Status = "Concluida",
                             Title = "Tarefa 13 do Projeto 9",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 174L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
                             Status = "Pendente",
                             Title = "Tarefa 14 do Projeto 9",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 175L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 4, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 9L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 9",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 176L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 9L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 16 do Projeto 9",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 177L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 10, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 13, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 17 do Projeto 9",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 178L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 10, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 9L,
                             Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 9",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 179L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 11, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 14, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 9L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 19 do Projeto 9",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 180L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 9.",
-                            ExpectedEndDate = new DateTime(2024, 12, 3, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 14, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 9L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 20 do Projeto 9",
                             UserId = 3L
                         },
@@ -2629,11 +2629,11 @@ namespace Infrastructure.Migrations
                             Id = 181L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 1 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 11, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 1 do Projeto 10",
                             UserId = 4L
                         },
@@ -2642,86 +2642,86 @@ namespace Infrastructure.Migrations
                             Id = 182L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 2 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 12, 2, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 20, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "Concluida",
+                            Status = "EmAndamento",
                             Title = "Tarefa 2 do Projeto 10",
-                            UserId = 2L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 183L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 3 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 22, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 10, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 10L,
                             Status = "Pendente",
                             Title = "Tarefa 3 do Projeto 10",
-                            UserId = 1L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 184L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 4 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 11, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 26, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 6, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 10L,
                             Status = "Concluida",
                             Title = "Tarefa 4 do Projeto 10",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 185L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 5 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 9, 9, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 27, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 5 do Projeto 10",
-                            UserId = 2L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 186L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 6 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 17, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 5, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 12, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 10L,
-                            Status = "Pendente",
+                            Status = "EmAndamento",
                             Title = "Tarefa 6 do Projeto 10",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 187L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 7 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 7 do Projeto 10",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 188L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 8 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 11, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 1, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 23, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 10L,
                             Status = "Concluida",
@@ -2733,138 +2733,138 @@ namespace Infrastructure.Migrations
                             Id = 189L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 9 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 8, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 21, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 9 do Projeto 10",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 190L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 10 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 9, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 28, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 15, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 9, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
                             Status = "Pendente",
                             Title = "Tarefa 10 do Projeto 10",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 191L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 11 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 9, 4, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 21, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
                             Status = "Concluida",
                             Title = "Tarefa 11 do Projeto 10",
-                            UserId = 4L
+                            UserId = 3L
                         },
                         new
                         {
                             Id = 192L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 12 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 15, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 10L,
                             Status = "Concluida",
                             Title = "Tarefa 12 do Projeto 10",
-                            UserId = 3L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 193L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 13 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 9, 12, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 8, 30, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 8, 18, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 13 do Projeto 10",
-                            UserId = 3L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 194L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 14 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 11, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 11, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 3, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
                             Status = "EmAndamento",
                             Title = "Tarefa 14 do Projeto 10",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 195L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 15 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 31, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 20, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 9, 28, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 17, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Concluida",
                             Title = "Tarefa 15 do Projeto 10",
-                            UserId = 4L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 196L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 16 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 23, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 10, 6, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 29, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 10L,
-                            Status = "Concluida",
+                            Status = "Pendente",
                             Title = "Tarefa 16 do Projeto 10",
-                            UserId = 1L
+                            UserId = 2L
                         },
                         new
                         {
                             Id = 197L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 17 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 1, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 18, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 2, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
-                            Status = "Pendente",
+                            Status = "Concluida",
                             Title = "Tarefa 17 do Projeto 10",
-                            UserId = 1L
+                            UserId = 4L
                         },
                         new
                         {
                             Id = 198L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 18 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 8, 24, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 8, 19, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 8, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 10, 26, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Alta",
                             ProjectId = 10L,
                             Status = "Concluida",
                             Title = "Tarefa 18 do Projeto 10",
-                            UserId = 4L
+                            UserId = 1L
                         },
                         new
                         {
                             Id = 199L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 19 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 12, 7, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 11, 30, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 11, 16, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 11, 10, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Media",
                             ProjectId = 10L,
                             Status = "Concluida",
@@ -2876,14 +2876,50 @@ namespace Infrastructure.Migrations
                             Id = 200L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Descrição da tarefa 20 para o projeto 10.",
-                            ExpectedEndDate = new DateTime(2024, 10, 8, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
-                            ExpectedStartDate = new DateTime(2024, 9, 25, 20, 49, 7, 161, DateTimeKind.Utc).AddTicks(7033),
+                            ExpectedEndDate = new DateTime(2024, 10, 5, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
+                            ExpectedStartDate = new DateTime(2024, 9, 19, 23, 27, 29, 389, DateTimeKind.Utc).AddTicks(9625),
                             Priority = "Baixa",
                             ProjectId = 10L,
-                            Status = "EmAndamento",
+                            Status = "Pendente",
                             Title = "Tarefa 20 do Projeto 10",
                             UserId = 3L
                         });
+                });
+
+            modelBuilder.Entity("Domain.Entities.TaskComment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<DateTime?>("DateUpdated")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar(150)");
+
+                    b.Property<long>("TaskId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("TaskComment");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -2942,7 +2978,7 @@ namespace Infrastructure.Migrations
                             Email = "MANAGER@ECLIPSE.APP",
                             IsActive = true,
                             Name = "MANAGER",
-                            Password = "$2a$11$E9FHKxfSb.WDeWAhXD1NNOo065KZ1NwsQRq6ICnd8gfsj6Ob4Osey",
+                            Password = "$2a$11$8a5E.sBrxo782jNm8dvXuutGBpGMpZdvcjuhtPUqAWGMxu3kPARJW",
                             UserRoleId = 1L
                         },
                         new
@@ -2952,7 +2988,7 @@ namespace Infrastructure.Migrations
                             Email = "DEVELOPER@ECLIPSE.APP",
                             IsActive = true,
                             Name = "DEVELOPER",
-                            Password = "$2a$11$QtHC3v/D2.wiwWKO/8RoV.wrZUyR/IU5d3ejaDCJCoNrXXuUyzTd6",
+                            Password = "$2a$11$WY7Vi.Fcv388SBTKkOBCB.MGq/2Mz2CjlkpRCNMePgbbvzTI8Z6CG",
                             UserRoleId = 2L
                         },
                         new
@@ -2962,7 +2998,7 @@ namespace Infrastructure.Migrations
                             Email = "ANALYST@ECLIPSE.APP",
                             IsActive = true,
                             Name = "ANALYST",
-                            Password = "$2a$11$t07BnH2apPGPAPjYCaJ5pO964P311pupUewKeHT00iKPaQKw5duqK",
+                            Password = "$2a$11$zJ2I.nH2qPOgYZkDi4AbZ.0uXWvuvTUn4L4cYND/vl2PvcWw7ZaCy",
                             UserRoleId = 2L
                         },
                         new
@@ -2972,7 +3008,7 @@ namespace Infrastructure.Migrations
                             Email = "TESTER@ECLIPSE.APP",
                             IsActive = true,
                             Name = "TESTER",
-                            Password = "$2a$11$KqsmprUFw2YvOxEWz88ZEeDeXR141BPqe05pz3PEE1xyJ.tMJpxQC",
+                            Password = "$2a$11$lJb/evHNXWniNCvDYMkCke0jHgN8uplbpgd7PgiFloQIwA1v7cYLK",
                             UserRoleId = 2L
                         },
                         new
@@ -2982,7 +3018,7 @@ namespace Infrastructure.Migrations
                             Email = "DESIGNER@ECLIPSE.APP",
                             IsActive = true,
                             Name = "DESIGNER",
-                            Password = "$2a$11$w.Qqk3gR4o9og1gU5QBTnemFEdDOL1W0yVtQTMWfKMBkJjVGYgyNC",
+                            Password = "$2a$11$M2EG.gL5rcX/79.kIDKFAObQ7NIR4LcoQCTkB5JaYTC0UWmuC2eX.",
                             UserRoleId = 2L
                         });
                 });
@@ -3026,7 +3062,7 @@ namespace Infrastructure.Migrations
                         {
                             Id = 2L,
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "TEAM"
+                            Description = "TIME"
                         });
                 });
 
@@ -3071,6 +3107,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Entities.TaskComment", b =>
+                {
+                    b.HasOne("Domain.Entities.Task", "Task")
+                        .WithMany("ListTaskComment")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany("ListTaskComment")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Task");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.HasOne("Domain.Entities.UserRole", "UserRole")
@@ -3087,6 +3142,11 @@ namespace Infrastructure.Migrations
                     b.Navigation("ListTask");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Task", b =>
+                {
+                    b.Navigation("ListTaskComment");
+                });
+
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Navigation("ListAuditLog");
@@ -3094,6 +3154,8 @@ namespace Infrastructure.Migrations
                     b.Navigation("ListProject");
 
                     b.Navigation("ListTask");
+
+                    b.Navigation("ListTaskComment");
                 });
 
             modelBuilder.Entity("Domain.Entities.UserRole", b =>
