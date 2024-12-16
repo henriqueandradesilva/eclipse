@@ -15,6 +15,12 @@ namespace tests.ReportsUseCasesTests;
 
 public class GetListAverageTasksCompletedReportUseCaseTests
 {
+    /// <summary>
+    /// Testa se o método Execute retorna o relatório corretamente quando o usuário possui o papel de gerente.
+    /// O teste verifica se o fluxo de sucesso é seguido (sem erro) e garante que o método Error() do OutputPort e o método 
+    /// Add() do NotificationHelper não sejam chamados. O caso de uso deve gerar o relatório com base nas tarefas completadas
+    /// sem adicionar mensagens de erro.
+    /// </summary>
     [Fact]
     public async System.Threading.Tasks.Task Execute_Should_Return_Report_When_UserIsManager()
     {
@@ -72,6 +78,12 @@ public class GetListAverageTasksCompletedReportUseCaseTests
         mockNotificationHelper.Verify(nh => nh.Add(It.IsAny<string>(), It.IsAny<string>()), Times.Never);
     }
 
+    /// <summary>
+    /// Testa se o método Execute retorna um erro quando o usuário não possui o papel de gerente.
+    /// O teste verifica se, ao ser passado um usuário com papel diferente de gerente, o método Error() do OutputPort 
+    /// é chamado e o método Add() do NotificationHelper é invocado para adicionar a mensagem de erro.
+    /// Nenhum relatório é gerado e o processo de erro é executado corretamente.
+    /// </summary>
     [Fact]
     public async System.Threading.Tasks.Task Execute_Should_Return_Report_When_UserIsNotManager()
     {
