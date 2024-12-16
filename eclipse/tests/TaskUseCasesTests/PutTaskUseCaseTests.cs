@@ -41,7 +41,7 @@ public class PutTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -89,6 +89,78 @@ public class PutTaskUseCaseTests
     }
 
     /// <summary>
+    /// Verifica se não é permitido alterar a prioridade de uma tarefa após ela ter sido criada.
+    /// </summary>
+    [Fact]
+    public async Task Execute_Should_Return_Error_When_Trying_To_Update_Priority_Of_Existing_Task()
+    {
+        // Arrange
+        var task = new Domain.Entities.Task(
+            id: 1,
+            projectId: 1,
+            userId: 1,
+            title: "Update Task 1",
+            description: "Description 1",
+            expectedStartDate: DateTime.UtcNow,
+            expectedEndDate: DateTime.UtcNow.AddDays(5),
+            status: Domain.Common.Enums.StatusEnum.EmAndamento,
+            priority: Domain.Common.Enums.PriorityEnum.Baixa
+        );
+
+        var options = new DbContextOptionsBuilder<EclipseDbContext>()
+            .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")
+            .Options;
+
+        var dbContext = new EclipseDbContext(options);
+
+        await SeedMockData.Init(dbContext, true, true, true, true);
+
+        var mockTaskRepository = new Mock<ITaskRepository>();
+
+        mockTaskRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.Task, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.Task, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.Task>().Where(predicate));
+
+        var mockUnitOfWork = new Mock<IUnitOfWork>();
+        var mockNotificationHelper = new Mock<NotificationHelper>();
+        var mockOutputPort = new Mock<IOutputPort<Domain.Entities.Task>>();
+
+        #region Audit Log
+
+        var mockAuditLogRepository = new Mock<IAuditLogRepository>();
+
+        mockAuditLogRepository
+            .Setup(repo => repo.Where(It.IsAny<Expression<Func<Domain.Entities.AuditLog, bool>>>()))
+            .Returns((Expression<Func<Domain.Entities.AuditLog, bool>> predicate) =>
+                dbContext.Set<Domain.Entities.AuditLog>().Where(predicate));
+
+        var mockPostAuditLogUseCase = new PostAuditLogUseCase(
+            mockUnitOfWork.Object,
+            mockAuditLogRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        #endregion
+
+        var useCase = new PutTaskUseCase(
+            mockUnitOfWork.Object,
+            mockPostAuditLogUseCase,
+            mockTaskRepository.Object,
+            mockNotificationHelper.Object
+        );
+
+        useCase.SetOutputPort(mockOutputPort.Object);
+
+        // Act
+        await useCase.Execute(task);
+
+        // Assert
+        mockNotificationHelper.Verify(nh => nh.Add(SystemConst.Error, MessageConst.TaskNotChangedPriority), Times.Once);
+        mockOutputPort.Verify(op => op.Error(), Times.Once);
+    }
+
+    /// <summary>
     /// Verificar se tarefa já existe
     /// </summary>
     [Fact]
@@ -113,8 +185,7 @@ public class PutTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
-
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -186,7 +257,7 @@ public class PutTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 

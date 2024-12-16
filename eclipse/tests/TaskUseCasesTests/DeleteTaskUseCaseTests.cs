@@ -25,7 +25,7 @@ public class DeleteTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
         mockTaskRepository
@@ -61,7 +61,7 @@ public class DeleteTaskUseCaseTests
     public async System.Threading.Tasks.Task Execute_Should_Return_NotFound_When_Task_Is_Not_Found()
     {
         // Arrange
-        var taskId = 999L; // ID de tarefa inexistente
+        var taskId = 999L;
 
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
             .UseInMemoryDatabase($"TestDatabase_{Guid.NewGuid()}")

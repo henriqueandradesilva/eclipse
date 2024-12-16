@@ -40,7 +40,7 @@ public class PostTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, false);
+        await SeedMockData.Init(dbContext, true, true, true, false);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -94,7 +94,7 @@ public class PostTaskUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
         mockTaskRepository

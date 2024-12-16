@@ -49,9 +49,9 @@ public class DeleteProjectUseCase : IDeleteProjectUseCase
 
             if (existTaskPending)
             {
-                _notificationHelper.Add(SystemConst.NotFound, MessageConst.ProjectTaskPending);
+                _notificationHelper.Add(SystemConst.Error, MessageConst.ProjectTaskPending);
 
-                _outputPort.NotFound();
+                _outputPort.Error();
             }
             else
             {

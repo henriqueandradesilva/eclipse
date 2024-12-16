@@ -20,7 +20,7 @@ public class GetListSearchProjectUseCaseTests
     /// Listagem de projetos
     /// </summary>
     [Fact]
-    public void Execute_Should_Return_Filtered_Projects_By_UserId_And_Pagination()
+    public async System.Threading.Tasks.Task Execute_Should_Return_Filtered_Projects_By_UserId_And_Pagination()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -29,7 +29,7 @@ public class GetListSearchProjectUseCaseTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, false);
+        await SeedMockData.Init(dbContext, true, true, true, false);
 
         var mockProjectRepository = new Mock<IProjectRepository>();
         mockProjectRepository

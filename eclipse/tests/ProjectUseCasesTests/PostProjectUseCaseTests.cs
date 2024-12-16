@@ -37,7 +37,7 @@ public class PostProjectUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, false, false);
+        await SeedMockData.Init(dbContext, true, true, false, false);
 
         var mockProjectRepository = new Mock<IProjectRepository>();
         mockProjectRepository
@@ -87,7 +87,7 @@ public class PostProjectUseCaseTests
 
         var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, false);
+        await SeedMockData.Init(dbContext, true, true, true, false);
 
         var mockProjectRepository = new Mock<IProjectRepository>();
         mockProjectRepository

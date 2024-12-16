@@ -7,7 +7,7 @@ namespace tests.Common;
 
 public static class SeedMockData
 {
-    public static void Init(
+    public static async System.Threading.Tasks.Task Init(
         EclipseDbContext dbContext,
         bool initUserRole,
         bool initUser,
@@ -145,6 +145,6 @@ public static class SeedMockData
             dbContext.Set<Domain.Entities.Task>().AddRange(tasks);
         }
 
-        dbContext.SaveChanges();
+        await dbContext.SaveChangesAsync();
     }
 }

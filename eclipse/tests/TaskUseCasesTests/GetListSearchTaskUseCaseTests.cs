@@ -19,7 +19,7 @@ public class GetListSearchTaskUseCaseTests
     /// Listagem de tarefas por UserId
     /// </summary>
     [Fact]
-    public void Execute_Should_Return_Filtered_Tasks_By_UserId_And_Pagination()
+    public async System.Threading.Tasks.Task Execute_Should_Return_Filtered_Tasks_By_UserId_And_Pagination()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -28,7 +28,7 @@ public class GetListSearchTaskUseCaseTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -83,7 +83,7 @@ public class GetListSearchTaskUseCaseTests
     /// Listagem de tarefas por UserId quando o UserId não for encontrado
     /// </summary>
     [Fact]
-    public void Execute_Should_Return_NotFound_When_UserId_Is_Not_Found()
+    public async System.Threading.Tasks.Task Execute_Should_Return_NotFound_When_UserId_Is_Not_Found()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -92,7 +92,7 @@ public class GetListSearchTaskUseCaseTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -139,7 +139,7 @@ public class GetListSearchTaskUseCaseTests
     /// Listagem de tarefas por ProjectId
     /// </summary>
     [Fact]
-    public void Execute_Should_Return_Filtered_Tasks_By_ProjectId_And_Pagination()
+    public async System.Threading.Tasks.Task Execute_Should_Return_Filtered_Tasks_By_ProjectId_And_Pagination()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -148,7 +148,7 @@ public class GetListSearchTaskUseCaseTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
@@ -203,7 +203,7 @@ public class GetListSearchTaskUseCaseTests
     /// Listagem de tarefas por ProjectId quando o ProjectId não for encontrado
     /// </summary>
     [Fact]
-    public void Execute_Should_Return_NotFound_When_ProjectId_Is_Not_Found()
+    public async System.Threading.Tasks.Task Execute_Should_Return_NotFound_When_ProjectId_Is_Not_Found()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<EclipseDbContext>()
@@ -212,7 +212,7 @@ public class GetListSearchTaskUseCaseTests
 
         using var dbContext = new EclipseDbContext(options);
 
-        SeedMockData.Init(dbContext, true, true, true, true);
+        await SeedMockData.Init(dbContext, true, true, true, true);
 
         var mockTaskRepository = new Mock<ITaskRepository>();
 
