@@ -47,4 +47,13 @@ public class TaskComment : BaseGenericEntity
         = new Validators.ValidatorTaskComment();
 
     #endregion
+
+    #region Extensions
+
+    public override string ToString()
+    {
+        return $"Comentário: {Description}, Usuário: {User.Name}, Data Criação: {DateCreated}, Data Alteração: {DateUpdated} ";
+    }
+
+    #endregion
 }
