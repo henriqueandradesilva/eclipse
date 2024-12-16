@@ -14,21 +14,38 @@ using System.Linq;
 public class GetListTaskByPriorityReportUseCase : IGetListTaskByPriorityReportUseCase
 {
     private IOutputPortWithNotFound<List<GetListTaskByPriorityReportResponse>> _outputPort;
-    private readonly ITaskRepository _taskRepository;
+    private readonly ITaskRepository _repository;
+    private readonly IUserRepository _userRepository;
     private readonly NotificationHelper _notificationHelper;
 
     public GetListTaskByPriorityReportUseCase(
-        ITaskRepository taskRepository,
+        ITaskRepository repository,
+        IUserRepository userRepository,
         NotificationHelper notificationHelper)
     {
-        _taskRepository = taskRepository;
+        _repository = repository;
+        _userRepository = userRepository;
         _notificationHelper = notificationHelper;
     }
 
-    public async System.Threading.Tasks.Task Execute()
+    public async System.Threading.Tasks.Task Execute(
+        long userId)
     {
+        var user =
+            await _userRepository?.Where(c => c.Id == userId)
+                                 ?.FirstOrDefaultAsync();
+
+        if (user.UserRoleId != SystemConst.UserRoleManagerIdDefault)
+        {
+            _notificationHelper.Add(SystemConst.Error, MessageConst.MessageManager);
+
+            _outputPort.Error();
+
+            return;
+        }
+
         var query =
-            _taskRepository.GetAllWithIncludes(t => t.User);
+            _repository.GetAllWithIncludes(t => t.User);
 
         var result = await query?.ToListAsync();
 

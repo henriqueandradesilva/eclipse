@@ -422,15 +422,178 @@
 			]
 		},
 		{
+			"name": "comentarios",
+			"item": [
+				{
+					"name": "Criação de Comentário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tarefaId\": 1,\r\n  \"usuarioId\": 2,\r\n  \"descricao\": \"Novo Comentário - 2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60100/api/v1/tarefas-comentarios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas-comentarios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alteração de Comentário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tarefaId\": 1,\r\n  \"usuarioId\": 2,\r\n  \"descricao\": \"Novo Comentário - 2025\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60100/api/v1/tarefas-comentarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas-comentarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Comentário Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60100/api/v1/tarefas-comentarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas-comentarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de Comentário Por TarefaId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"taskId\",\r\n      \"item2\": 1\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"description\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60100/api/v1/tarefas-comentarios/consultar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas-comentarios",
+								"consultar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remoção de Comentário",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"listaRelacionamento\": [\r\n    {\r\n      \"item1\": \"userId\",\r\n      \"item2\": 2\r\n    }\r\n  ],\r\n  \"paginaAtual\": 1,\r\n  \"tamanhoPagina\": 10,\r\n  \"campoOrdenacao\": \"title\",\r\n  \"direcaoOrdenacao\": \"asc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:60100/api/v1/tarefas-comentarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"tarefas-comentarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "relatorios",
 			"item": [
 				{
-					"name": "Relatório de médio de tarefas concluídas por usuário nos últimos dias",
+					"name": "Relatório de médio de tarefas concluídas",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:60100/api/v1/relatorios/media-tarefas-concluidas?daysInterval=30",
+							"raw": "http://localhost:60100/api/v1/relatorios/media-tarefas-concluidas?usuarioId=1&intervaloDias=30",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -444,7 +607,43 @@
 							],
 							"query": [
 								{
-									"key": "daysInterval",
+									"key": "usuarioId",
+									"value": "1"
+								},
+								{
+									"key": "intervaloDias",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Relatório de médio de tarefas concluídas - Sem Permissão",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:60100/api/v1/relatorios/media-tarefas-concluidas?usuarioId=2&intervaloDias=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "60100",
+							"path": [
+								"api",
+								"v1",
+								"relatorios",
+								"media-tarefas-concluidas"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "2"
+								},
+								{
+									"key": "intervaloDias",
 									"value": "30"
 								}
 							]
@@ -458,7 +657,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:60100/api/v1/relatorios/progresso-geral",
+							"raw": "http://localhost:60100/api/v1/relatorios/progresso-geral?usuarioId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -469,6 +668,12 @@
 								"v1",
 								"relatorios",
 								"progresso-geral"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -480,7 +685,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:60100/api/v1/relatorios/projetos-atrasados",
+							"raw": "http://localhost:60100/api/v1/relatorios/projetos-atrasados?usuarioId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -491,6 +696,12 @@
 								"v1",
 								"relatorios",
 								"projetos-atrasados"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -502,7 +713,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:60100/api/v1/relatorios/tarefas-por-prioridade",
+							"raw": "http://localhost:60100/api/v1/relatorios/tarefas-por-prioridade?usuarioId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -513,6 +724,12 @@
 								"v1",
 								"relatorios",
 								"tarefas-por-prioridade"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -524,7 +741,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:60100/api/v1/relatorios/produtividade-usuario",
+							"raw": "http://localhost:60100/api/v1/relatorios/produtividade-usuario?usuarioId=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -535,6 +752,12 @@
 								"v1",
 								"relatorios",
 								"produtividade-usuario"
+							],
+							"query": [
+								{
+									"key": "usuarioId",
+									"value": "1"
+								}
 							]
 						}
 					},

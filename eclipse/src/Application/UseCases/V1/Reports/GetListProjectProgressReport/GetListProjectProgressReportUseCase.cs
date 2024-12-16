@@ -16,21 +16,38 @@ namespace Application.UseCases.V1.Reports.GetListProjectProgressReport;
 public class GetListProjectProgressReportUseCase : IGetListProjectProgressReportUseCase
 {
     private IOutputPortWithNotFound<List<GetListProjectProgressReportResponse>> _outputPort;
-    private readonly ITaskRepository _taskRepository;
+    private readonly ITaskRepository _repository;
+    private readonly IUserRepository _userRepository;
     private readonly NotificationHelper _notificationHelper;
 
     public GetListProjectProgressReportUseCase(
-        ITaskRepository taskRepository,
+        ITaskRepository repository,
+        IUserRepository userRepository,
         NotificationHelper notificationHelper)
     {
-        _taskRepository = taskRepository;
+        _repository = repository;
+        _userRepository = userRepository;
         _notificationHelper = notificationHelper;
     }
 
-    public async System.Threading.Tasks.Task Execute()
+    public async System.Threading.Tasks.Task Execute(
+        long userId)
     {
+        var user =
+            await _userRepository?.Where(c => c.Id == userId)
+                                 ?.FirstOrDefaultAsync();
+
+        if (user.UserRoleId != SystemConst.UserRoleManagerIdDefault)
+        {
+            _notificationHelper.Add(SystemConst.Error, MessageConst.MessageManager);
+
+            _outputPort.Error();
+
+            return;
+        }
+
         var query =
-             _taskRepository.GetAllWithIncludes(t => t.Project);
+             _repository.GetAllWithIncludes(t => t.Project);
 
         var result = await query?.ToListAsync();
 

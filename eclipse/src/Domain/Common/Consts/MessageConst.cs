@@ -30,6 +30,8 @@ public class MessageConst
 
     public const string MessageEmpty = "Nenhuma registro encontrado.";
 
+    public const string MessageManager = "Somente usuários com perfil de gerente podem acessar os relatórios.";
+
     #endregion
 
     #region Project

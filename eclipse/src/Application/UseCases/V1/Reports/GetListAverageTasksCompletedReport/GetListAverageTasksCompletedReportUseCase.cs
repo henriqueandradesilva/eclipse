@@ -16,26 +16,40 @@ namespace Application.UseCases.V1.Reports.GetListAverageTasksCompletedReport;
 public class GetListAverageTasksCompletedReportUseCase : IGetListAverageTasksCompletedReportUseCase
 {
     private IOutputPortWithNotFound<List<GetListAverageTasksCompletedReportResponse>> _outputPort;
-    private readonly ITaskRepository _taskRepository;
+    private readonly ITaskRepository _repository;
     private readonly IUserRepository _userRepository;
     private readonly NotificationHelper _notificationHelper;
 
     public GetListAverageTasksCompletedReportUseCase(
-        ITaskRepository taskRepository,
+        ITaskRepository repository,
         IUserRepository userRepository,
         NotificationHelper notificationHelper)
     {
-        _taskRepository = taskRepository;
+        _repository = repository;
         _userRepository = userRepository;
         _notificationHelper = notificationHelper;
     }
 
     public async System.Threading.Tasks.Task Execute(
+        long userId,
         int daysInterval)
     {
+        var user =
+            await _userRepository?.Where(c => c.Id == userId)
+                                 ?.FirstOrDefaultAsync();
+
+        if (user.UserRoleId != SystemConst.UserRoleManagerIdDefault)
+        {
+            _notificationHelper.Add(SystemConst.Error, MessageConst.MessageManager);
+
+            _outputPort.Error();
+
+            return;
+        }
+
         var intervalStartDate = DateTime.UtcNow.AddDays(-daysInterval);
 
-        var query = _taskRepository.GetAllWithIncludes(t => t.User);
+        var query = _repository.GetAllWithIncludes(t => t.User);
 
         var tasks = await query?.Where(c => c.ExpectedEndDate >= intervalStartDate)?.ToListAsync();
 

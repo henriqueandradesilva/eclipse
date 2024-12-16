@@ -7,6 +7,7 @@ namespace Application.UseCases.V1.Reports.GetListAverageTasksCompletedReport.Int
 public interface IGetListAverageTasksCompletedReportUseCase
 {
     System.Threading.Tasks.Task Execute(
+        long userId,
         int daysInterval);
 
     void SetOutputPort(

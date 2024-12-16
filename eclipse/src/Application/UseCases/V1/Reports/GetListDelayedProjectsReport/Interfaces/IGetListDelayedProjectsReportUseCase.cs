@@ -6,7 +6,8 @@ namespace Application.UseCases.V1.Reports.GetListDelayedProjectsReport.Interface
 
 public interface IGetListDelayedProjectsReportUseCase
 {
-    System.Threading.Tasks.Task Execute();
+    System.Threading.Tasks.Task Execute(
+        long userId);
 
     void SetOutputPort(
         IOutputPortWithNotFound<List<GetListDelayedProjectReportResponse>> outputPort);

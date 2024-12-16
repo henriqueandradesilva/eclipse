@@ -16,21 +16,38 @@ namespace Application.UseCases.V1.Reports.GetListDelayedProjectsReport;
 public class GetListDelayedProjectsReportUseCase : IGetListDelayedProjectsReportUseCase
 {
     private IOutputPortWithNotFound<List<GetListDelayedProjectReportResponse>> _outputPort;
-    private readonly ITaskRepository _taskRepository;
+    private readonly ITaskRepository _repository;
+    private readonly IUserRepository _userRepository;
     private readonly NotificationHelper _notificationHelper;
 
     public GetListDelayedProjectsReportUseCase(
-        ITaskRepository taskRepository,
+        ITaskRepository repository,
+        IUserRepository userRepository,
         NotificationHelper notificationHelper)
     {
-        _taskRepository = taskRepository;
+        _repository = repository;
+        _userRepository = userRepository;
         _notificationHelper = notificationHelper;
     }
 
-    public async System.Threading.Tasks.Task Execute()
+    public async System.Threading.Tasks.Task Execute(
+        long userId)
     {
+        var user =
+            await _userRepository?.Where(c => c.Id == userId)
+                                 ?.FirstOrDefaultAsync();
+
+        if (user.UserRoleId != SystemConst.UserRoleManagerIdDefault)
+        {
+            _notificationHelper.Add(SystemConst.Error, MessageConst.MessageManager);
+
+            _outputPort.Error();
+
+            return;
+        }
+
         var query =
-            _taskRepository.GetAllWithIncludes(t => t.Project, t => t.Project.User, t => t.User);
+            _repository.GetAllWithIncludes(t => t.Project, t => t.Project.User, t => t.User);
 
         var result = await query?.ToListAsync();
 

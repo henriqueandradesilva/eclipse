@@ -6,7 +6,8 @@ namespace Application.UseCases.V1.Reports.GetListProjectProgressReport.Interface
 
 public interface IGetListProjectProgressReportUseCase
 {
-    System.Threading.Tasks.Task Execute();
+    System.Threading.Tasks.Task Execute(
+        long userId);
 
     void SetOutputPort(
         IOutputPortWithNotFound<List<GetListProjectProgressReportResponse>> outputPort);
