@@ -73,51 +73,62 @@ public class PutTaskUseCase : IPutTaskUseCase
                 }
                 else
                 {
-                    var countTask =
-                        await _repository?.Where(c => c.ProjectId == task.ProjectId)
-                                         ?.CountAsync();
-
-                    if (countTask >= SystemConst.TaskMaxPermitted)
+                    if (task.ExpectedStartDate >= task.ExpectedEndDate)
                     {
-                        _notificationHelper.Add(SystemConst.Error, MessageConst.TaskMaxPermitted);
+                        _notificationHelper.Add(SystemConst.Error, MessageConst.MessageDatetimeError);
 
                         _outputPort.Error();
 
                         return;
                     }
-
-                    var listDifference = AuditLogHelper.GetListDifference(task, result);
-
-                    foreach (var difference in listDifference)
-                    {
-                        var auditLog = new Domain.Entities.AuditLog(0, task.Id, task.UserId, difference.ToString(), DateTime.UtcNow, Domain.Common.Enums.TypeEntityEnum.Task);
-
-                        var auditLogOutputPort =
-                            new OutputPortService<Domain.Entities.AuditLog>(_notificationHelper);
-
-                        _postAuditLogUseCase.SetOutputPort(auditLogOutputPort);
-
-                        await _postAuditLogUseCase.Execute(auditLog);
-                    }
-
-                    task.Map(result);
-
-                    result.SetDateUpdated();
-
-                    _repository.Update(result);
-
-                    var response =
-                        await _unitOfWork.Save()
-                                         .ConfigureAwait(false);
-
-                    if (!string.IsNullOrEmpty(response))
-                    {
-                        _notificationHelper.Add(SystemConst.Error, response);
-
-                        _outputPort.Error();
-                    }
                     else
-                        _outputPort.Ok(result);
+                    {
+                        var countTask =
+                            await _repository?.Where(c => c.ProjectId == task.ProjectId)
+                                             ?.CountAsync();
+
+                        if (countTask >= SystemConst.TaskMaxPermitted)
+                        {
+                            _notificationHelper.Add(SystemConst.Error, MessageConst.TaskMaxPermitted);
+
+                            _outputPort.Error();
+
+                            return;
+                        }
+
+                        var listDifference = AuditLogHelper.GetListDifference(task, result);
+
+                        foreach (var difference in listDifference)
+                        {
+                            var auditLog = new Domain.Entities.AuditLog(0, task.Id, task.UserId, difference.ToString(), DateTime.UtcNow, Domain.Common.Enums.TypeEntityEnum.Task);
+
+                            var auditLogOutputPort =
+                                new OutputPortService<Domain.Entities.AuditLog>(_notificationHelper);
+
+                            _postAuditLogUseCase.SetOutputPort(auditLogOutputPort);
+
+                            await _postAuditLogUseCase.Execute(auditLog);
+                        }
+
+                        task.Map(result);
+
+                        result.SetDateUpdated();
+
+                        _repository.Update(result);
+
+                        var response =
+                            await _unitOfWork.Save()
+                                             .ConfigureAwait(false);
+
+                        if (!string.IsNullOrEmpty(response))
+                        {
+                            _notificationHelper.Add(SystemConst.Error, response);
+
+                            _outputPort.Error();
+                        }
+                        else
+                            _outputPort.Ok(result);
+                    }
                 }
             }
         }

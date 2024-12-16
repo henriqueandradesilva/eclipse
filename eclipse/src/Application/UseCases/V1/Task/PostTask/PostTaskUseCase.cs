@@ -47,38 +47,49 @@ public class PostTaskUseCase : IPostTaskUseCase
 
         if (task.Id == 0)
         {
-            var countTask =
-                await _repository?.Where(c => c.ProjectId == task.ProjectId)
-                                 ?.CountAsync();
-
-            if (countTask >= SystemConst.TaskMaxPermitted)
+            if (task.ExpectedStartDate >= task.ExpectedEndDate)
             {
-                _notificationHelper.Add(SystemConst.Error, MessageConst.TaskMaxPermitted);
+                _notificationHelper.Add(SystemConst.Error, MessageConst.MessageDatetimeError);
 
                 _outputPort.Error();
 
                 return;
             }
+            else
+            {
+                var countTask =
+                    await _repository?.Where(c => c.ProjectId == task.ProjectId)
+                                     ?.CountAsync();
 
-            task.SetDateCreated();
+                if (countTask >= SystemConst.TaskMaxPermitted)
+                {
+                    _notificationHelper.Add(SystemConst.Error, MessageConst.TaskMaxPermitted);
 
-            await _repository.Add(task)
-                             .ConfigureAwait(false);
+                    _outputPort.Error();
 
-            var response =
-                await _unitOfWork.Save()
+                    return;
+                }
+
+                task.SetDateCreated();
+
+                await _repository.Add(task)
                                  .ConfigureAwait(false);
 
-            if (!string.IsNullOrEmpty(response))
-            {
-                _notificationHelper.Add(SystemConst.Error, response);
+                var response =
+                    await _unitOfWork.Save()
+                                     .ConfigureAwait(false);
 
-                _outputPort.Error();
+                if (!string.IsNullOrEmpty(response))
+                {
+                    _notificationHelper.Add(SystemConst.Error, response);
 
-                return;
+                    _outputPort.Error();
+
+                    return;
+                }
+
+                _outputPort.Ok(task);
             }
-
-            _outputPort.Ok(task);
         }
         else
         {

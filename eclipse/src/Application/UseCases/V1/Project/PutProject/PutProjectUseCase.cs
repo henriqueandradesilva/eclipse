@@ -66,24 +66,35 @@ public class PutProjectUseCase : IPutProjectUseCase
                 }
                 else
                 {
-                    project.Map(result);
-
-                    result.SetDateUpdated();
-
-                    _repository.Update(result);
-
-                    var response =
-                        await _unitOfWork.Save()
-                                         .ConfigureAwait(false);
-
-                    if (!string.IsNullOrEmpty(response))
+                    if (project.ExpectedStartDate >= project.ExpectedEndDate)
                     {
-                        _notificationHelper.Add(SystemConst.Error, response);
+                        _notificationHelper.Add(SystemConst.Error, MessageConst.MessageDatetimeError);
 
                         _outputPort.Error();
+
+                        return;
                     }
                     else
-                        _outputPort.Ok(result);
+                    {
+                        project.Map(result);
+
+                        result.SetDateUpdated();
+
+                        _repository.Update(result);
+
+                        var response =
+                            await _unitOfWork.Save()
+                                             .ConfigureAwait(false);
+
+                        if (!string.IsNullOrEmpty(response))
+                        {
+                            _notificationHelper.Add(SystemConst.Error, response);
+
+                            _outputPort.Error();
+                        }
+                        else
+                            _outputPort.Ok(result);
+                    }
                 }
             }
         }

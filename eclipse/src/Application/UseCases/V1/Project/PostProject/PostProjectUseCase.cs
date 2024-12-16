@@ -46,25 +46,36 @@ public class PostProjectUseCase : IPostProjectUseCase
 
         if (project.Id == 0)
         {
-            project.SetDateCreated();
-
-            await _repository.Add(project)
-                             .ConfigureAwait(false);
-
-            var response =
-                await _unitOfWork.Save()
-                                 .ConfigureAwait(false);
-
-            if (!string.IsNullOrEmpty(response))
+            if (project.ExpectedStartDate >= project.ExpectedEndDate)
             {
-                _notificationHelper.Add(SystemConst.Error, response);
+                _notificationHelper.Add(SystemConst.Error, MessageConst.MessageDatetimeError);
 
                 _outputPort.Error();
 
                 return;
             }
+            else
+            {
+                project.SetDateCreated();
 
-            _outputPort.Ok(project);
+                await _repository.Add(project)
+                                 .ConfigureAwait(false);
+
+                var response =
+                    await _unitOfWork.Save()
+                                     .ConfigureAwait(false);
+
+                if (!string.IsNullOrEmpty(response))
+                {
+                    _notificationHelper.Add(SystemConst.Error, response);
+
+                    _outputPort.Error();
+
+                    return;
+                }
+
+                _outputPort.Ok(project);
+            }
         }
         else
         {
